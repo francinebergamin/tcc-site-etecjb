@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ETEC João Belarmino</title>
+
+    <link rel="icon" type="image/png" href="/imgs/logo/jb.png">
+
+    <!-- ICONSCOUT CDN -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+
+    <link href="dist/float-labels.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/admin/css/login.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav__container">
+                <div class="nav__title">
+                    <a href="/index.html"><img src="/imgs/logo/logo.png" alt="Logo JB"></a>
+                </div>
+            </div>
+        </nav>
+
+        <button class="theme__switch"><i class="uil uil-sun theme-icon"></i></button>
+
+    </header>
+
+    <section class="login__container">
+        <div class="login__content">
+
+            <div class="login__title">
+                <h1>Login</h1>
+                
+            </div>  
+        
+            <label class="login__label" for="username">Nome de usuário</label>
+            <input placeholder="e.x.: admin" class="login__input" type="text" id=""username>
+            
+        
+            <label class="login__label" for="password">Senha</label>
+            <input placeholder="e.x.: admin123" class="login__input" type="password" id="loginPassword">
+            
+
+            <div class="password">
+                <p class="toggle__password">Mostrar Senha</p>
+    
+                <label class="toggler-wrapper style-25"> 
+                    <input type="checkbox" onclick="showPassword()">
+                    <div class="toggler-slider">
+                      <div class="toggler-knob"></div>
+                    </div>
+                  </label>
+            </div>
+
+            <button class="login__btn" role="button">ENTRAR</button>
+
+        </div>
+    </section>
+
+    <script src="/js/main.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,161 @@
+main {
+    margin-top: 2rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    background-color: var(--color-white);
+    background-image: url(https://www.transparenttextures.com/patterns/pixel-weave.png);
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset{
+    width: 25rem;
+    padding: 0.7rem;
+    margin: 0rem 0 1rem 0;
+    border: 1px solid var(--color-black);
+}
+
+fieldset input {
+    height: 100%;
+    width: 100%;
+
+    background: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+legend {
+    padding: 0.5rem;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa {
+    position: relative;
+    display: table-cell;
+    padding-right: 0.25rem;
+
+    /* width: 3.75rem; */
+    /* height: 4rem; */
+    
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main__content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 11.5rem; */
+    justify-items: end;
+    justify-content: space-between;
+
+}
+
+/* .grid{
+    display: flex;
+    gap: 1rem;
+}
+ */
+.header{
+    display: inline-flex;
+    align-items: center;
+    align-content: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.main{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.st-content, .cp-content{
+    font-size: medium;
+    font-weight: 500;
+
+    width: 50rem;
+    height: 3rem;
+
+    padding: 0rem 2.2rem 0.5rem 0rem;
+    margin-bottom: 0.5rem;
+
+    resize: vertical;
+
+    border: 0;
+    /* border-bottom: 2px solid var(--color-light); */
+    background-image: url("https://www.transparenttextures.com/patterns/pixel-weave.png");
+    border-radius: 5px;
+}
+
+.cp-content{
+    height: 40rem;
+}
+
+.content{
+    display: flex;
+}
+
+.attach__main{
+    display: flex;
+}
+
+.attach__content {
+    width: 41.5rem;
+    /* Muda o height aqui ->  height: auto;  */
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+
+
+#imagesPreview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+#imagesPreview>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.id{
+    width: 4rem;
+    height: 4rem;
+}
+
+.title{
+    width: 32rem;
+    height: 4rem;
+}
+
+.data{
+    width: 0rem;
+    height: 4rem;
+}
+
+.attach{
+    width: 40rem;
+    height: 4rem;
+}

@@ -1,0 +1,237 @@
+/* NOTICE */
+.notice {
+    margin-top: 8rem;
+    padding: 1rem 0;
+    background: var(--color-white);
+    margin-bottom: 3rem;
+}
+
+.notice__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice__header {
+    background: var(--color-primary);
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    color: var(--color-white);
+    border-radius: 1rem 1rem 0 0;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    margin-top: -3rem;
+}
+
+.notice__title h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+.notice__subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.notice__info {
+    margin-top: 1.4rem;
+}
+
+.notice__info span {
+    font-size: 0.9rem;
+    color: var(--color-bg);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.notice__header hr {
+    border-bottom: 1px solid var(--color-bg);
+}
+
+.notice__main {
+    max-width: 1000px;
+}
+
+.notice__img {
+    margin: 2rem 0;
+}
+
+.notice__text p {
+    margin-bottom: 1.3rem;
+}
+
+.notice__text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.notice__categories {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: end;
+}
+
+.notice__category {
+    position: relative;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: var(--color-primary);
+    padding: 0.5rem 0.7rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.notice__category::before {
+    content: '';
+    position: absolute;
+    right: calc(100% + 0.5rem);
+    bottom: 50%;
+    height: 2px;
+    width: 100vw;
+    background: var(--color-black);
+}
+
+.notice__category a {
+    color: var(--color-white);
+}
+
+.notice__category:hover {
+    background: var(--color-primary-dark);
+}
+
+/* MORE NEWS */
+.moreNews {
+    margin-bottom: 3rem;
+}
+
+.moreNews__title {
+    overflow: hidden;
+}
+
+.moreNews__title h1 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    width: fit-content;
+}
+
+.moreNews__title h1::before {
+    content: '';
+    position: absolute;
+    left: calc(100% + 0.5rem);
+    bottom: 50%;
+    transform: translateY(50%);
+    height: 2px;
+    width: 100vw;
+    background: var(--color-primary);
+}
+
+.moreNews__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.news {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--color-white);
+}
+
+.news__img {
+    position: relative;
+    height: 100%;
+}
+
+.news__img img {
+    height: 100%;
+}
+
+.category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: var(--color-primary);
+    padding: 0.5rem 0.7rem;
+    transition: var(--transition);
+    color: var(--color-white);
+} 
+
+.news__desc {
+    padding: 1.5rem;
+}
+
+.news__title h1 {
+    font-size: 1.3rem;
+}
+
+.news__text {
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+
+    /* Non webkit browsers */
+    line-height: 18px;
+    height: calc(18px * 6);  
+}
+
+.moreNews hr {
+    border-top: 2px solid var(--color-primary);
+    margin-top: 1.5rem;
+}
+
+/* MEDIA QUERIES (TABLETS) */
+@media screen and (max-width: 1060px) {
+    /* NOTICE */
+    .notice__title h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .notice__subtitle {
+        font-size: 1rem;
+    }
+
+
+    /* MORE NEWS */
+    .news {
+        grid-template-columns: 1fr;
+    }
+
+    .category {
+        top: auto;
+        left: auto;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+/* MEDIA QUERIES (PHONES) */
+@media screen and (max-width: 600px) {
+    /* NOTICE */
+    .notice__title h1 {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    .notice__subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* MORE NEWS */
+    .moreNews__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+}

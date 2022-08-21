@@ -1,0 +1,225 @@
+/* LOGIN CONTAINER */
+.login__container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-white);
+    background-image: url("https://www.transparenttextures.com/patterns/pixel-weave.png");
+}
+
+
+
+/* LOGIN CONTENT */
+.login__title{
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem 0.5rem 0;
+}
+
+.login__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+
+    border-radius: 0.2rem;
+    padding: 2rem;
+    background-color: var(--color-white);
+
+}
+
+.login__label{
+    font-weight: 600;
+    margin-top: 0.25rem;
+    padding: 0.5rem 0 0.4rem 0;
+}
+
+.login__input {
+    font-size: medium;
+    font-weight: 500;
+
+    width: 20rem;
+    padding: 0.7rem 0.5rem;
+    margin-bottom: 0.5rem;
+
+    border: 0;
+    /* border-bottom: 2px solid var(--color-light); */
+    background-color: var(--color-bg);
+    border-radius: 5px;
+}
+
+input::placeholder{
+    color: var(--color-placeholder);
+    font-size: 0.9rem;
+}
+
+/* LOGIN BUTTON */
+.login__btn {
+    width: 21rem;
+    margin-top: 2.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: var(--color-black);
+    background: var(--color-white);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.login__btn:hover{
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.login__btn:before {
+    content: "";
+    background: linear-gradient(
+    45deg,
+    #ad0519,
+    #f22e42,
+    #fbecee,
+    #f64b5c,
+    #db0016,
+    #ff0617
+    );
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(0.025rem);
+    -webkit-filter: blur(0.025rem);
+    width: calc(100%);
+    height: calc(100% - 2px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+
+@keyframes glowing-button-85 {
+    0% {
+    background-position: 0 0;
+    }
+    50% {
+    background-position: 400% 0;
+    }
+    100% {
+    background-position: 0 0;
+    }
+}
+
+.login__btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg);
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+.toggler-wrapper.style-25 input[type="checkbox"]:checked+.toggler-slider {
+    background-color: var(--color-white);
+}
+
+.toggler-wrapper.style-25 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+    left: calc(100% - 19px - 3px);
+    background-color: var(--color-primary);
+    background-image: url(../img/check-fill.svg);
+}
+
+.toggler-wrapper.style-25 .toggler-slider {
+    background-color: var(--color-white);
+    -webkit-box-shadow: 0px 2px 4px var(--color-light);
+    box-shadow: 0px 1px 2px #b4b4b4;
+    border-radius: 5px;
+}
+
+.toggler-wrapper.style-25 .toggler-knob {
+    width: calc(25px - 6px);
+    height: calc(25px - 6px);
+    border-radius: 5px;
+    left: 3px;
+    top: 3px;
+    background-color: var(--color-light);
+    background-image: url(../img/close-fill.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* LOGIN SHOW PASSWORD */
+.password {
+    padding: 0.2rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle__password{
+    font-weight: 500;
+    padding: 0 1rem 0.25rem 0;
+}
+
+.toggler-wrapper {
+    display: block;
+    width: 45px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.toggler-wrapper .toggler-slider {
+    background-color: var(--color-placeholder);
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+/* COLOR PALETTE */
+:root {
+    --color-white: #fff;
+    --color-light: #e0e0e0;
+    --color-black: #121212;
+    --color-bg: #eeeeee;
+    --color-placeholder: rgb(143, 143, 143);
+}
+
+
+
+
+
+
+
+
+  

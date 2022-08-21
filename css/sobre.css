@@ -1,12 +1,17 @@
-/* HISTORY */
-.history {
-    margin-top: 5rem;
+/* ABOUT */
+.about {
+    margin-top: 8rem;
 }
 
-.history__title {
+.about__title {
     background-color: var(--color-primary);
     padding: 10px 15px;
     border-radius: 20px 20px 0px 0px;
+}
+
+/* TOPICS */
+.topics {
+    overflow: hidden;
 }
 
 .topic__content {
@@ -38,33 +43,33 @@
     transform: translateX(0px);
 }
 
-.active .topic__img {
+.active .topic__img img {
     filter: saturate(100%);
 }
 
+.topic__img img {
+    filter: saturate(0%);
+}
+
 .topic__img {
-    width: 50%;
+    flex: 1;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-    filter: saturate(0%);
+    background: var(--color-primary-dark);
 }
 
 .topic__img:nth-child(odd) {
     clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
 }
 
-.history__text {
+.topic__text {
     padding: 1rem;
     margin: 15px;
-    width: 50%;
+    flex: 1;
 }
 
-.history__text > h3 {
+.topic__text > h3 {
     margin-bottom: 5px;
-}
-
-.history__img{
-    height: 50vh;
 }
 
 /* OBJECTIVES */
@@ -78,18 +83,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .objective {
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 100%;
 }
 
 .objective__card {
     position: relative;
     cursor: pointer;
+    max-width: 320px;
 }
 
 .card__content h1 {
@@ -97,7 +103,7 @@
 }
 
 .card__face {
-    transition: var(--transition);
+    transition: all 600ms ease;
 }
 
 .face1 {
@@ -108,11 +114,15 @@
     align-items: center;
     z-index: 1;
     padding: 20px;
-    transform: translateY(55px);
+    transform: translateY(70%);
     color: var(--color-white);
 }
 
-.objective__card:hover .face1 {
+.objective:hover {
+    align-items: center;
+}
+
+.objective:hover .face1 {
     background: var(--color-primary-dark);
     transform: translateY(0);
 }
@@ -129,16 +139,14 @@
     position: relative;
     background: var(--color-bg);
     opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px;
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    transform: translateY(-100px);
+    transform: translateY(-55px);
 }
 
-.objective__card:hover .face2 {
+.objective:hover .face2 {
+    display: flex;
     opacity: 1;
     transform: translateY(0);
 }
@@ -168,7 +176,7 @@
     cursor: pointer;
 }
 
-.--current {
+.team__selector .--current {
     text-decoration: underline var(--color-primary);
 }
 
@@ -223,6 +231,7 @@ tbody tr:last-child{
 #tablePages {
     display: none;
     justify-content: center;
+    align-items: center;
     padding: 15px;
     gap: 15px;
 }
@@ -243,6 +252,12 @@ tbody tr:last-child{
     font-family: 'Montserrat', sans-serif;
 }
 
+.page-icon {
+    color: var(--color-primary);
+    padding: 7px;
+    cursor: pointer;
+}
+
 .page:hover {
     color: white;
     background: var(--color-primary-dark);
@@ -256,7 +271,7 @@ tbody tr:last-child{
 
 /* MEDIA QUERIES (TABLETS) */
 @media screen and (max-width: 1060px) {
-    /* HISTORY */
+    /* TOPICS */
     .topic__content {
         flex-direction: column;
     }
@@ -265,7 +280,7 @@ tbody tr:last-child{
         flex-direction: column-reverse;
     }
 
-    .history__text {
+    .topic__text {
         width: 85%;
         text-align: center;
     }
@@ -274,8 +289,17 @@ tbody tr:last-child{
         clip-path: none;
         width: 100%;
     }
+
+    .topic__img:nth-child(odd) {
+        width: 100%;
+        clip-path: none;
+    }
     
     /* OBJECTIVES */
+    .objective:hover {
+        align-items: initial;
+    }
+
     .objectives__container {
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
@@ -285,21 +309,38 @@ tbody tr:last-child{
         width: 90%;
     }
 
+
     .face1 {
         transform: translateY(0);
     }
 
     .face2 {
+        position: relative;
         transform: translateY(0);
         opacity: 1;
+    }
+
+    /* TEAMS */
+    .team__selector {
+        justify-content: center;
     }
 }
 
 /* MEDIA QUERIES (PHONES) */
 @media screen and (max-width: 600px) {
+    /* OBJECTIVES */
     .objectives__container {
         gap: 3rem;
         grid-template-columns: 1fr;
+    }
+
+    /* TEAMS */
+    .team {
+        font-size: 1.4rem;
+    }
+
+    table {
+        font-size: 0.8rem;
     }
 }
 

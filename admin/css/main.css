@@ -1,0 +1,7 @@
+body{
+    background-color: var(--color-white);
+    background-image: url("https://www.transparenttextures.com/patterns/pixel-weave.png");
+
+    height: 100%;
+    padding: 9rem 2.2rem 0rem 18rem;
+}

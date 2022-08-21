@@ -7,7 +7,7 @@
 
     <title>ETEC João Belarmino</title>
 
-    <link rel="icon" type="image/png" href="./imgs/logo/jb.png">
+    <link rel="icon" type="image/png" href="/imgs/logo/jb.png">
 
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
@@ -15,22 +15,23 @@
     <!-- SWIPER JS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contato.css">
 </head>
+
 <body>
     <nav>
         <div class="nav__container">
             <div class="nav__title">
-                <img src="imgs/logo/jg-red.png " alt="Logo JB">
-                <h4><a href="index.html">ETEC João Belarmino</a></h4>
+                <img src="/imgs/logo/logo.png" alt="Logo JB">
             </div>
             <ul class="nav__menu">
-                <li><a href="index.html"><span><i class="uil uil-home"></i> <p>Início</p></span></a></li>
-                <li><a href="cursos.html"><span><i class="uil uil-graduation-cap"></i> <p>Cursos</p></span></a></li>
-                <li><a href="noticias.html"><span><i class="uil uil-newspaper"></i> <p>Notícias</p></span></a></li>
-                <li><a href="diretoria.html"><span><i class="uil uil-university"></i> <p>Diretoria</p></span></a></li>
-                <li><a href="sobre.html"><span><i class="uil uil-info-circle"></i> <p>Sobre nós</p></span></a></li>
-                <li><a href="contato.html"><span><i class="uil uil-phone"></i> <p>Contato</p></span></a></li>
+                <li><a href="/index.html"><span><i class="uil uil-home"></i> <p>Início</p></span></a></li>
+                <li><a href="/views/cursos.html"><span><i class="uil uil-graduation-cap"></i> <p>Cursos</p></span></a></li>
+                <li><a href="/views/noticias.html"><span><i class="uil uil-newspaper"></i> <p>Notícias</p></span></a></li>
+                <li><a href="/views/diretoria.html"><span><i class="uil uil-university"></i> <p>Diretoria</p></span></a></li>
+                <li><a href="/views/sobre.html"><span><i class="uil uil-info-circle"></i> <p>Sobre nós</p></span></a></li>
+                <li><a href="/views/contato.html"><span><i class="uil uil-phone"></i> <p>Contato</p></span></a></li>
             </ul>
             <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
             <button id="close-menu-btn"><i class="uil uil-multiply"></i></i></button>
@@ -38,17 +39,85 @@
     </nav>
 
     <button class="theme__switch"><i class="uil uil-sun theme-icon"></i></button>
+    
+    <!-- <section class="contact">
+        <div class="contact__container container">
+            <div class="contact__content">
+                <h1 class="contact__title">Entre em Contato conosco</h1>
+                <p class="contact__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur adipisci assumenda impedit atque voluptates, cum officia voluptas quod nobis perspiciatis.
+                </p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__card">
+                    <i class="uil uil-phone"></i>
+                    <h3>Telefone</h3>
+                    <span>+55 19 99868-4987</span>
+                    <span>+55 19 99999-0000</span>
+                </div>
+                <div class="contact__card">
+                    <i class="uil uil-envelope"></i>
+                    <h3>Email</h3>
+                    <span>e067acad@cps.sp.gov.br</span>
+                    <span>e067adm@cps.sp.gov.br</span>
+                </div>
+                <div class="contact__card">
+                    <i class="uil uil-location-point"></i>
+                    <h3>Localização</h3>
+                    <span>Rua Sete de Setembro, 299</span>
+                    <span>CEP: 13900-372</span>
+                </div>
+            </div>
+        </div>
+    </section> -->
 
+    <section class="contact">
+        <div class="contact__header">
+            <div class="contact__title"><h1>Entre em Contato</h1></div>
+            <div class="contact__subtitle"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero dicta delectus facere repudiandae minus natus amet quas ipsum commodi dolor!</p></div>
+        </div>
+        <div class="contact__main">
+            <div class="contact__grid container">
+                <div class="contact__card">
+                    <i class="uil uil-phone"></i>
+                    <h2>Telefone</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, aut!</p>
+                    <span>+55 19 99868-4987</span>
+                    <span>+55 19 99999-0000</span>
+                </div>
+                <div class="contact__card">
+                    <i class="uil uil-envelope"></i>
+                    <h2>Email</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, aut!</p>
+                    <span>e067acad@cps.sp.gov.br</span>
+                    <span>e067adm@cps.sp.gov.br</span>
+                </div>
+                <div class="contact__card">
+                    <i class="uil uil-location-point"></i>
+                    <h2>Localização</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, aut!</p>
+                    <span>Rua Sete de Setembro, 299</span>
+                    <span>CEP: 13900-372</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14722.333567223142!2d-46.7650427!3d-22.7065477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x47221efa058bc901!2sETEC%20Jo%C3%A3o%20Belarmino!5e0!3m2!1spt-BR!2sbr!4v1660527944243!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    
     <footer>
         <div class="container footer__container">
             <div class="footer__1">
-                <a href="index.html" class="footer__logo"><h4>ETEC João Belarmino</h4></a>
+                <a href="/index.html" class="footer__logo"><h4>ETEC João Belarmino</h4></a>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aperiam nisi autem?
                 </p>
                 <div class="footer__imgs">
-                    <img src="./imgs/footer/jb-banner.png">
-                    <img src="./imgs/footer/cps.png">
+                    <img src="/imgs/footer/jb-banner.png">
+                    <img src="/imgs/footer/cps.png">
                 </div>
             </div>
 
@@ -145,7 +214,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="main.js"></script>
 
 </body>

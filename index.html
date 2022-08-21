@@ -14,22 +14,23 @@
 
     <!-- SWIPER JS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <nav>
         <div class="nav__container">
             <div class="nav__title">
-                <img src="imgs/logo/jg-red.png " alt="Logo JB">
-                <h4><a href="index.html">ETEC João Belarmino</a></h4>
+                <img src="imgs/logo/logo.png " alt="Logo JB">
+                <!-- <h4><a href="/index.html">ETEC João Belarmino</a></h4> -->
             </div>
             <ul class="nav__menu">
-                <li><a href="index.html"><span><i class="uil uil-home"></i> <p>Início</p></span></a></li>
-                <li><a href="cursos.html"><span><i class="uil uil-graduation-cap"></i> <p>Cursos</p></span></a></li>
-                <li><a href="noticias.html"><span><i class="uil uil-newspaper"></i> <p>Notícias</p></span></a></li>
-                <li><a href="diretoria.html"><span><i class="uil uil-university"></i> <p>Diretoria</p></span></a></li>
-                <li><a href="sobre.html"><span><i class="uil uil-info-circle"></i> <p>Sobre nós</p></span></a></li>
-                <li><a href="contato.html"><span><i class="uil uil-phone"></i> <p>Contato</p></span></a></li>
+                <li><a href="./index.html" class="--current"><span><i class="uil uil-home"></i> <p>Início</p></span></a></li>
+                <li><a href="./views/cursos.html"><span><i class="uil uil-graduation-cap"></i> <p>Cursos</p></span></a></li>
+                <li><a href="./views/noticias.html"><span><i class="uil uil-newspaper"></i> <p>Notícias</p></span></a></li>
+                <li><a href="./views/diretoria.html"><span><i class="uil uil-university"></i> <p>Diretoria</p></span></a></li>
+                <li><a href="./views/sobre.html"><span><i class="uil uil-info-circle"></i> <p>Sobre nós</p></span></a></li>
+                <li><a href="./views/contato.html"><span><i class="uil uil-phone"></i> <p>Contato</p></span></a></li>
             </ul>
             <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
             <button id="close-menu-btn"><i class="uil uil-multiply"></i></i></button>
@@ -38,133 +39,201 @@
 
     <button class="theme__switch"><i class="uil uil-sun theme-icon"></i></button>
 
-    <!-- </header> -->
+    <header class="slides swiper mySwiper">
+        <div class="swiper-wrapper slides__container">
+            <article class="slide swiper-slide">
+                <div class="slide-image">
+                    <img src="./imgs/slide-pics/img1.png">
+                </div>
+            </article>
 
+            <article class="slide swiper-slide">
+                <div class="slide-image">
+                    <img src="./imgs/slide-pics/img2.png">
+                </div>
+            </article>
 
+            <article class="slide swiper-slide">
+                <div class="slide-image">
+                    <img src="./imgs/slide-pics/img3.png">
+                </div>
+            </article>
 
-    <section class="news">
-        <div class="news__title">
+            <article class="slide swiper-slide">
+                <div class="slide-image">
+                    <img src="./imgs/slide-pics/img4.png">
+                </div>
+            </article>
+
+            <article class="slide swiper-slide">
+                <div class="slide-image">
+                    <img src="./imgs/slide-pics/img5.png">
+                </div>
+            </article>
+
+            <article class="slide swiper-slide">
+                <div class="slide-image">
+                    <img src="./imgs/slide-pics/img6.png">
+                </div>
+            </article>
+
+            <article class="slide swiper-slide">
+                <div class="slide-image">
+                    <img src="./imgs/slide-pics/img7.png">
+                </div>
+            </article>
+        </div>
+        <div class="swiper-button-next swiper-button"></div>
+        <div class="swiper-button-prev swiper-button"></div>
+        <div class="swiper-pagination"></div>
+    </header>
+
+    <section class="lastNews container">
+        <div class="lastNews__title">
             <h1 class="color--white">Últimas notícias</h1>
         </div>
-        <div class="news__container">
-            <div class="notice">
-                <h2 class="notice__title">Título Noticía</h2>
-                <hr class="notice__division">
-                <div class="notice__img">
+        <div class="lastNews__container">
+            <div class="lastNotice">
+                <h2 class="lastNotice__title">Título Notícia</h2>
+                <div class="lastNotice__img">
                     <img src="./imgs/slide-pics/img2.png">
                     <em class="--desc"><i class="uil uil-calender"></i>24/10/2018</em>
                 </div>
-                <p class="notice__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae iste praesentium, sit quis alias similique consequatur omnis vitae quia cupiditate ex sapiente consectetur reprehenderit vero mollitia voluptates earum, recusandae eligendi!</p>
-                <a href="noticias.html"><button class="notice__btn">Continuar lendo</button></a>
+                <p class="lastNotice__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum, quam assumenda, tempore odit nobis nihil sapiente nulla consequuntur incidunt necessitatibus modi amet saepe recusandae? Beatae similique dolore, numquam at laborum eaque optio nemo consectetur id officiis, quae ipsum sint quibusdam doloribus amet magni praesentium maxime rem unde consequuntur vero quo?</p>
+                <div class="lastNotice__btn">
+                    <a href="exemploNoticia.html">Continuar Lendo <i class="uil uil-arrow-right"></i> </a>
+                </div>
             </div>
-
-            <div class="notice">
-                <h2 class="notice__title">Título Noticía</h2>
-                <hr class="notice__division">
-                <div class="notice__img">
+            <div class="lastNotice">
+                <h2 class="lastNotice__title">Título Notícia</h2>
+                <div class="lastNotice__img">
                     <img src="./imgs/slide-pics/img3.png">
                     <em class="--desc"><i class="uil uil-calender"></i>05/07/2005</em>
                 </div>
-                <p class="notice__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae iste praesentium, sit quis alias similique consequatur omnis vitae quia cupiditate ex sapiente consectetur reprehenderit vero mollitia voluptates earum, recusandae eligendi!</p>
-                <a href="noticias.html"><button class="notice__btn">Continuar lendo</button></a>
+                <p class="lastNotice__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae iste praesentium, sit quis alias similique consequatur omnis vitae quia cupiditate ex sapiente consectetur reprehenderit vero mollitia voluptates earum, recusandae eligendi!</p>
+                <div class="lastNotice__btn">
+                    <a href="exemploNoticia.html">Continuar Lendo <i class="uil uil-arrow-right"></i> </a>
+                </div>
             </div>
-
-            <div class="notice">
-                <h2 class="notice__title">Título Noticía</h2>
-                <hr class="notice__division">
-                <div class="notice__img">
+            <div class="lastNotice">
+                <h2 class="lastNotice__title">Título Notícia</h2>
+                <div class="lastNotice__img">
                     <img src="./imgs/slide-pics/img5.png">
                     <em class="--desc"><i class="uil uil-calender"></i>02/09/1945</em>
                 </div>
-                <p class="notice__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae iste praesentium, sit quis alias similique consequatur omnis vitae quia cupiditate ex sapiente consectetur reprehenderit vero mollitia voluptates earum, recusandae eligendi!</p>
-                <a href="noticias.html"><button class="notice__btn">Continuar lendo</button></a>
+                <p class="lastNotice__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorum perferendis architecto velit numquam! Voluptatibus ut sunt sapiente repellat, odio voluptatum inventore voluptas amet quibusdam sint libero, temporibus a dolorem? Odit obcaecati nihil officiis veniam molestias, hic dignissimos at eos.</p>
+                <div class="lastNotice__btn">
+                    <a href="exemploNoticia.html">Continuar Lendo <i class="uil uil-arrow-right"></i> </a>
+                </div>
             </div>
         </div>
+        <div class="lastNews__btn"><a href="./views/noticias.html">Todas As Notícias</a></div>
     </section>
 
-    <section class="courses">
-        <div class="courses-div__title">
-            <h1 class="title__bg">Conheça Nossos Principais Cursos</h1>
-            <p class="courses__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet incidunt aperiam cupiditate in eaque tempore excepturi tempora ex eos optio facilis enim iure perferendis quam deleniti, quasi nemo, pariatur sunt!</p>
+    <section class="featuredCourses">
+        <div class="featuredCourses__title container">
+            <h1>Nossos Principais Cursos</h1>
+            <p class="featuredCourses__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet incidunt aperiam cupiditate in eaque tempore excepturi tempora ex eos optio facilis enim iure perferendis quam deleniti, quasi nemo, pariatur sunt!</p>
         </div>
-        <div class="courses__container">
-            <div class="courses__left">
-                <div class="courses__title color--red">
+        <div class="featuredCourses__container container">
+            <div class="featuredCourses__left">
+                <div class="featuredCourses__title color--red">
                     <h3>Cursos Técnicos + Ensino Médio</h3>
                 </div>
-                <div class="courses__grid">
-                    
-                    <div class="course">
-                        <div class="line__courses__red">
-                            <a href="cursos.html"><img src="./imgs/slide-pics/img5.png" class="course__img">
-                            <div class="course__content">
-                                <div class="course__title color--red"><h5>Nome Curso</h5></div>
-                                <p class="course__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
-                            </a>
+                <div class="featuredCourses__grid">
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--red"><h5>Desenvolvimento de Sistemas</h5></div>
+                                <p class="featuredCourse__desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere autem asperiores voluptas numquam voluptatibus ab labore, quas cum repudiandae perferendis nesciunt, aliquam commodi atque quasi ipsam, esse officiis dicta suscipit fugit? Pariatur alias quam earum? Ullam illum saepe, vitae fugit delectus molestiae impedit, velit mollitia, doloremque exercitationem accusantium repellat reiciendis!</p>
                             </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
                         </div>
                     </div>
-
-                    <div class="course">
-                        <div class="line__courses__red">
-                            <a href="index.html"><img src="./imgs/slide-pics/img5.png" class="course__img">
-                            <div class="course__content">
-                                <div class="course__title color--red"><h5>Nome Curso</h5></div>
-                                <p class="course__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
-                            </a>
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--red"><h5>Eletronica</h5></div>
+                                <p class="featuredCourse__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ducimus ipsum consequatur maiores quam voluptatem consequuntur dicta. Quaerat, quos et.</p>
                             </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
                         </div>
                     </div>
-                    <div class="course">
-                        <div class="line__courses__red">
-                            <a href="index.html"><img src="./imgs/slide-pics/img5.png" class="course__img">
-                            <div class="course__content">
-                                <div class="course__title color--red"><h5>Nome Curso</h5></div>
-                                <p class="course__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
-                            </a>
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--red"><h5>Quimica</h5></div>
+                                <p class="featuredCourse__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti similique iusto nam fuga perferendis debitis expedita enim rerum recusandae corporis quibusdam mollitia sed obcaecati neque, dolor cum veniam porro dolorem beatae exercitationem repudiandae. Dolores nisi ad expedita voluptatum, culpa aperiam!</p>
                             </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
                         </div>
                     </div>
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--red"><h5>Quimica</h5></div>
+                                <p class="featuredCourse__desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti similique iusto nam fuga perferendis debitis expedita enim rerum recusandae corporis quibusdam mollitia sed obcaecati neque, dolor cum veniam porro dolorem beatae exercitationem repudiandae. Dolores nisi ad expedita voluptatum, culpa aperiam!</p>
+                            </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="featuredCourses__cta">
+                    <a href="./views/cursos.html">Ver Todos</a>
                 </div>
             </div>
-
-            <hr class="courses__divisor">
-
-            <div class="courses__right">
-                <div class="courses__title color--blue">
+            <div class="featuredCourses__right">
+                <div class="featuredCourses__title color--blue">
                     <h3>Cursos Técnicos</h3>
                 </div>
-                <div class="courses__grid">
-                    <div class="course">
-                        <div class="line__courses__blue">
-                            <a href="contato.html"><img src="./imgs/slide-pics/img5.png" class="course__img">
-                            <div class="course__content">
-                                <div class="course__title color--blue"><h5>Nome Curso</h5></div>
-                                <p class="course__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
-                            </a>
+                <div class="featuredCourses__grid">
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--blue"><h5>Desenvolvimento de Sistemas</h5></div>
+                                <p class="featuredCourse__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, autem? Nesciunt aperiam cumque ipsam unde quibusdam nihil quidem. Molestiae, amet quis? Voluptatum culpa suscipit quae quibusdam ut, optio voluptatibus, qui ratione commodi quasi accusantium libero.</p>
                             </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
                         </div>
                     </div>
-                    <div class="course">
-                        <div class="line__courses__blue">
-                            <a href="diretoria.html"><img src="./imgs/slide-pics/img5.png" class="course__img">
-                            <div class="course__content">
-                                <div class="course__title color--blue"><h5>Nome Curso</h5></div>
-                                <p class="course__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
-                            </a>
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--blue"><h5>Nome Curso</h5></div>
+                                <p class="featuredCourse__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, debitis libero magnam labore facilis vel ipsam accusantium sed tempora? Sed neque rerum perferendis, odio at corporis. Magni voluptas laborum fuga.</p>
                             </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
                         </div>
                     </div>
-                    <div class="course">
-                        <div class="line__courses__blue">
-                            <a href="sobre.html"><img src="./imgs/slide-pics/img5.png" class="course__img">
-                            <div class="course__content">
-                                <div class="course__title color--blue"><h5>Nome Curso</h5></div>
-                                <p class="course__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
-                            </a>
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--blue"><h5>Nome Curso</h5></div>
+                                <p class="featuredCourse__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
                             </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
                         </div>
                     </div>
+                    <div class="featuredCourse">
+                        <img src="./imgs/slide-pics/img5.png" class="featuredCourse__img">
+                        <div class="featuredCourse__content">
+                            <div class="featuredCourese__info">
+                                <div class="featuredCourse__title color--blue"><h5>Nome Curso</h5></div>
+                                <p class="featuredCourse__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque placeat voluptates ea fuga ipsam quo beatae repudiandae blanditiis aperiam rem at, quisquam consectetur quis!</p>
+                            </div>
+                            <div class="featuredCourse__btn"><a href="./views/cursos.html">Ver Mais</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="featuredCourses__cta">
+                    <a href="./views/cursos.html">Ver Todos</a>
                 </div>
             </div>
         </div>
@@ -253,8 +322,8 @@
             <div class="testimonial__info">
                 <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" class="avatar">
                 <div class="testimonial__desc">
-                    <h5>Giu</h5>
-                    <small>Vagabundo</small>
+                    <h5>Gustavo</h5>
+                    <small>Programmer</small>
                 </div>
             </div>
             </article>
@@ -297,11 +366,11 @@
                 <h4>Páginas</h4>
                 <ul class="permalinks">
                     <li><a href="index.html">Início</a></li>
-                    <li><a href="cursos.html">Cursos</a></li>
-                    <li><a href="noticias.html">Notícias</a></li>
-                    <li><a href="diretoria.html">Diretoria</a></li>
-                    <li><a href="sobre.html">Sobre nós</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="./views/cursos.html">Cursos</a></li>
+                    <li><a href="./views/noticias.html">Notícias</a></li>
+                    <li><a href="./views/diretoria.html">Diretoria</a></li>
+                    <li><a href="./views/sobre.html">Sobre nós</a></li>
+                    <li><a href="./views/contato.html">Contato</a></li>
                 </ul>
             </div>
 
@@ -385,7 +454,7 @@
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="/js/main.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -395,6 +464,10 @@
         var swiper = new Swiper(".mySwiper", {
           slidesPerView: 1,
           spaceBetween: 30,
+          autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          },
           loop: true,
           pagination: {
             el: ".swiper-pagination",
