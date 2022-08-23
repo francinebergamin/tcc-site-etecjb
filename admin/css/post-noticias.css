@@ -130,13 +130,13 @@ legend {
 #imagesPreview {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    grid-gap: 0.5rem;
 }
 
 #imagesPreview>img{
     width: 100%;
     height: 100%;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     object-fit: cover;
 }
 
