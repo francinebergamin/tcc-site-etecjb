@@ -1,6 +1,7 @@
 body{
     background-color: var(--color-bg);
     height: 100%;
+    /* width: 100%; */
     padding: 9rem 2.2rem 0rem 18rem;
 }
 

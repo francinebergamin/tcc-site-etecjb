@@ -8,12 +8,16 @@ main {
     gap: 2rem;
     display: grid;
     grid-template-columns: 0fr 1fr;
-    justify-content: space-around;
+    justify-content: space-between;
     justify-items: stretch;
 }
 
-
-
+header{
+    flex-direction: column;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+}
 
 
 /* ÍCONES */
@@ -43,8 +47,8 @@ main {
 
 /* INSERIR DADOS */
 
-.sec__left{
-    width: fit-content;
+.sec1{
+    width: 45rem;
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -54,6 +58,7 @@ main {
 
     /* ID, TITULO E DATA */
     .header{
+        gap: 1rem;
         display: inline-flex;
         align-items: center;
         align-content: stretch;
@@ -70,23 +75,25 @@ main {
         display: flex;
     }
 
+    .st-text{
+        height: 0.7rem;
+    }
+
+    .subtitle{
+        height: 4rem;
+    }
 
     .st-text, .cp-text{
         font-size: medium;
         font-weight: 500;
-    
-        width: 50rem;
-        height: 3rem;
-    
-        padding: 0rem 2.2rem 0.5rem 0rem;
+        width: 100%;
+        height: 100%;
+        padding: 0rem 4rem 0.5rem 0rem;
         margin-bottom: 0.5rem;
-    
         resize: vertical;
-    
         border: 0;
         /* border-bottom: 2px solid var(--color-light); */
         background: none;
-        border-radius: 5px;
     }
     
     .cp-text{
@@ -95,7 +102,7 @@ main {
 
     fieldset{
         border-radius: 0.25rem;
-        width: 25rem;
+        /* width: 25rem; */
         padding: 0.7rem;
         margin: 0rem 0 1rem 0;
         border: 1px solid var(--color-black);

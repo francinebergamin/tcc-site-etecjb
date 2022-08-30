@@ -18,8 +18,27 @@
     <link rel="stylesheet" href="/admin/css/post_noticias.css">
 </head>
 <body>
+    <header>
+        <h2>Criar uma notícia</h2>
+
+        <div class="buttons">
+            <div class="save">  
+                <button class="btn__save" type="submit">Salvar</button>
+            </div>
+            
+            <div class="clear">   
+                <button class="btn__clear" type="reset">Limpar</button>
+                </div>
+    
+            <div class="cancel">   
+                <button class="btn__cancel">Cancelar</button>
+            </div> 
+        </div>
+    </header>
+
     <main>
-        <section class="sec__left">
+        
+        <section class="sec1">
             <div class="header">
                 <fieldset class="id">
                     <legend><h4>ID</h4></legend>
@@ -47,39 +66,15 @@
                     </div>
                 </fieldset>
             </div>
+
             <fieldset>
                 <legend><h4>Subtítulo</h4></legend>
-                <div class="content"> 
+                <div class="subtitle content"> 
                     <i class="fa fa-2x uil uil-comment-dots"></i>
-                    <textarea class="st-text" placeholder="Insira o subtítulo da notícia" rows="4" cols="50" name="" form=""></textarea>
+                    <textarea class="st-text" placeholder="Insira o subtítulo da notícia"></textarea>
                 </div>
             </fieldset>
-    
-            <fieldset>
-                <legend><h4>Corpo</h4></legend>
-                <div class="content">
-                    <i class="fa fa-2x uil uil-subject"></i>
-                    <textarea class="cp-text" placeholder="Insira o corpo da notícia" rows="4" cols="50" name="comment" form=""></textarea>
-                </div>
-            </fieldset>
-        </section>
 
-        <div class="sec__right">
-            <div class="buttons">
-                <div class="save">  
-                    <button class="btn__save" type="submit">Salvar</button>
-                </div>
-                
-                <div class="left__btns">
-                    <div class="clear">   
-                        <button class="btn__clear" type="reset">Limpar</button>
-                      </div>
-          
-                    <div class="cancel">   
-                        <button class="btn__cancel">Cancelar</button>
-                    </div> 
-                </div>    
-            </div>
             <fieldset class="attach">
                 <legend><h4>Anexo: foto e/ou vídeo</h4></legend>
                 <div class="attach__main">
@@ -87,11 +82,23 @@
                     <!-- <input type="file" accept="image/*, video/*"> -->
                     <input type="file" accept=".jpg, .jpeg, .png, .mp4, .avi" id="image[]" multiple onchange="addImagesToPreview(event)" />    
             </fieldset>
+
             <div class="attach__content">
                 <div id="imagesPreview"></div>
                 <script src="/js/components/ImagePreview.js"></script>
-            </div>
-        </div>       
+            </div> 
+        </section>
+
+        <section class="sec2">
+            <fieldset>
+                <legend><h4>Corpo</h4></legend>
+                <div class="content">
+                    <i class="fa fa-2x uil uil-subject"></i>
+                    <textarea class="cp-text" placeholder="Insira o corpo da notícia" rows="4" cols="50" name="comment" form=""></textarea>
+                </div>
+            </fieldset>
+        </section>  
+
     </main>
 
 </body>
