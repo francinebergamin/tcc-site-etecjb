@@ -17,40 +17,40 @@
     <link rel="stylesheet" href="/admin/css/post_avaliacoes.css">
 </head>
 <body>
+    <header>
+        <h2>Criar uma notícia</h2>
+
+        <div class="buttons">
+            <div class="save">  
+                <button class="btn__save" type="submit">Salvar</button>
+            </div>
+            
+            <div class="clear">   
+                <button class="btn__clear" type="reset">Limpar</button>
+                </div>
+    
+            <div class="cancel">   
+                <button class="btn__cancel">Cancelar</button>
+            </div> 
+        </div>
+    </header>
+    
     <main>
         <section class="sec__left">
-            <div class="header">
-                <div class="buttons">
-                    <div class="save">  
-                        <button class="btn__save" type="submit">Salvar</button>
-                    </div>
-                    
-                    <div class="left__btns">
-                        <div class="clear">   
-                            <button class="btn__clear" type="reset">Limpar</button>
-                          </div>
-              
-                        <div class="cancel">   
-                            <button class="btn__cancel">Cancelar</button>
-                        </div> 
-                    </div>    
-                </div>
+            <div class="pic">
+            <fieldset class="attach">
+                <legend><h4>Anexo: foto</h4></legend>
+                <div class="attach__main">
+                    <i class="fa fa-2x uil uil-file-search-alt"></i>
+                    <!-- <input type="file" accept="image/*, video/*"> -->
+                    <input type="file" accept=".jpg, .jpeg, .png" id="image[]" multiple onchange="addImagesToPreview(event)" />    
+            </fieldset>
 
-                <div class="pic">
-                    <fieldset class="attach">
-                        <legend><h4>Anexo: foto</h4></legend>
-                        <div class="attach__main">
-                            <i class="fa fa-2x uil uil-file-search-alt"></i>
-                            <!-- <input type="file" accept="image/*, video/*"> -->
-                            <input type="file" accept=".jpg, .jpeg, .png" id="image[]" multiple onchange="addImagesToPreview(event)" />    
-                    </fieldset>
-                    <div class="attach__content">
-                        <div id="imagesPreview"></div>
-                        <script src="/js/components/ImagePreview.js"></script>
-                    </div>
-                </div> 
-            </section> 
-
+            <div class="attach__content">
+                <div id="imagesPreview"></div>
+                <script src="/js/components/ImagePreview.js"></script>
+            </div> 
+        </section> 
             <section class="sec__right">
                 <fieldset class="fieldset__normal__txt">
                     <legend><h4>Nome</h4></legend>
@@ -84,11 +84,8 @@
                         <input disabled placeholder="" type="date">
                     </div>
                 </fieldset>
-
-                
             </section>          
-            
-            
+               
     </main>
 
 </body>

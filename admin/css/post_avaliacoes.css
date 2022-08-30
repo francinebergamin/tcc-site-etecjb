@@ -1,12 +1,19 @@
 main {
+    width: 100%;
     margin-top: 2rem;
     gap: 2rem;
     display: grid;
-    grid-template-columns: 0fr 1fr;
-    justify-content: space-around;
-    justify-items: stretch;
+    grid-template-columns: 42rem auto;
+    justify-content: start;
+    justify-items: start;
 }
 
+header{
+    flex-direction: column;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+}
 
 
 
@@ -38,7 +45,7 @@ main {
 
 /* INSERIR DADOS */
 
-.sec__left{
+.sec__left, .sec__right{
     width: fit-content;
     display: flex;
     flex-direction: column;
