@@ -46,11 +46,10 @@ body{
 }
 
 .buttons{
-    margin-bottom: 2.7rem;
     margin-top: 1rem;
     gap: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-direction: row;
 }
 

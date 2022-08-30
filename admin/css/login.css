@@ -1,5 +1,5 @@
 /* LOGIN CONTAINER */
-.nav__container{
+.nav__container {
     height: 100%;
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@
     padding: 0 3rem;
 }
 
-.login__container{
+.login__container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -17,14 +17,14 @@
 }
 
 /* LOGIN CONTENT */
-.login__title{
+.login__title {
     justify-items: center;
     display: flex;
     align-items: center;
     padding: 0rem 1rem 0.5rem 0;
 }
 
-.login__content{
+.login__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,7 @@
 
 }
 
-.login__label{
+.login__label {
     font-weight: 600;
     margin-top: 0.25rem;
     padding: 0.5rem 0 0.4rem 0;
@@ -57,7 +57,7 @@
     border-radius: 5px;
 }
 
-input::placeholder{
+input::placeholder {
     color: var(--color-placeholder);
     font-size: 0.9rem;
 }
@@ -83,22 +83,20 @@ input::placeholder{
     touch-action: manipulation;
 }
 
-.login__btn:hover{
+.login__btn:hover {
     color: var(--color-primary);
     transition: var(--transition);
 }
 
 .login__btn:before {
     content: "";
-    background: linear-gradient(
-    45deg,
-    #ad0519,
-    #f22e42,
-    #fbecee,
-    #f64b5c,
-    #db0016,
-    #ff0617
-    );
+    background: linear-gradient(45deg,
+            #ad0519,
+            #f22e42,
+            #fbecee,
+            #f64b5c,
+            #db0016,
+            #ff0617);
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -116,13 +114,15 @@ input::placeholder{
 
 @keyframes glowing-button-85 {
     0% {
-    background-position: 0 0;
+        background-position: 0 0;
     }
+
     50% {
-    background-position: 400% 0;
+        background-position: 400% 0;
     }
+
     100% {
-    background-position: 0 0;
+        background-position: 0 0;
     }
 }
 
@@ -175,7 +175,7 @@ input::placeholder{
     flex-direction: column;
 }
 
-.toggle__password{
+.toggle__password {
     font-weight: 500;
     padding: 0 1rem 0.25rem 0;
 }
@@ -218,12 +218,3 @@ input::placeholder{
     --color-bg: #eeeeee;
     --color-placeholder: rgb(143, 143, 143);
 }
-
-
-
-
-
-
-
-
-  
