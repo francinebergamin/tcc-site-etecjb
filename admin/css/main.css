@@ -1,7 +1,60 @@
 body{
-    background-color: var(--color-white);
-    background-image: url("https://www.transparenttextures.com/patterns/pixel-weave.png");
-
+    background-color: var(--color-bg);
     height: 100%;
     padding: 9rem 2.2rem 0rem 18rem;
+}
+
+
+.save, .clear, .cancel{
+    display: flex;
+}
+
+.btn__save, .btn__clear, .btn__cancel{
+    width: 10rem;
+    display: flex;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    transition: var(--transition);
+    background:var(--color-primary);
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btn__save:hover{
+    color: var(--color-primary);
+    background: none;
+}
+
+.btn__clear, .btn__cancel{
+    border: 2px solid var(--color-black);
+    color: var(--color-black);
+    background: none;
+}
+
+
+.btn__clear:hover, .btn__cancel:hover{
+    border: 2px solid var(--color-black);
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+.buttons{
+    margin-bottom: 2.7rem;
+    margin-top: 1rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.left__btns{
+    justify-content: flex-end;
+    gap: 1rem;
+    display: flex;
 }

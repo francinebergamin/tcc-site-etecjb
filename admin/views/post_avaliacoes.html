@@ -12,7 +12,6 @@
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
 
-    <link href="dist/float-labels.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/admin/css/main.css">
     <link rel="stylesheet" href="/admin/css/post_avaliacoes.css">
@@ -21,7 +20,22 @@
     <main>
         <section class="sec__left">
             <div class="header">
-               
+                <div class="buttons">
+                    <div class="save">  
+                        <button class="btn__save" type="submit">Salvar</button>
+                    </div>
+                    
+                    <div class="left__btns">
+                        <div class="clear">   
+                            <button class="btn__clear" type="reset">Limpar</button>
+                          </div>
+              
+                        <div class="cancel">   
+                            <button class="btn__cancel">Cancelar</button>
+                        </div> 
+                    </div>    
+                </div>
+
                 <div class="pic">
                     <fieldset class="attach">
                         <legend><h4>Anexo: foto</h4></legend>
@@ -34,45 +48,47 @@
                         <div id="imagesPreview"></div>
                         <script src="/js/components/ImagePreview.js"></script>
                     </div>
-                </div>  
-    
+                </div> 
             </section> 
 
-                <section class="sec__right">
-                    <fieldset class="fieldset__normal__txt">
-                        <legend><h4>Nome</h4></legend>
-                        <div class="content">
-                            <i class="fa fa-2x uil uil-text-fields"></i>
-                            <input placeholder="Insira o nome do autor" type="text">
-                        </div>
-                    </fieldset>
-        
-                    <fieldset class="fieldset__normal__txt">
-                        <legend><h4>Cargo/função</h4></legend>
-                        <div class="content">
-                            <i class="fa fa-2x uil uil-text-fields"></i>
-                            <input placeholder="Insira o cargo ou função ocupada pelo autor" type="text">
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend><h4>Frase</h4></legend>
-                        <div class="content"> 
-                            <i class="fa fa-2x uil uil-comment-dots"></i>
-                            <textarea class="fr-text" placeholder="Insira a frase" rows="4" cols="50" name="" form=""></textarea>
-                        </div>
-                    </fieldset>
-            
-                    <fieldset>
-                        <legend><h4>Data</h4></legend>
-                        <div class="content">
-                            <i class="fa fa-2x uil uil-calendar-alt"></i>
-                            <!-- Aqui o banco de dados vai informar a data atual -->
-                            <input disabled placeholder="" type="date">
-                        </div>
+            <section class="sec__right">
+                <fieldset class="fieldset__normal__txt">
+                    <legend><h4>Nome</h4></legend>
+                    <div class="content">
+                        <i class="fa fa-2x uil uil-text-fields"></i>
+                        <input placeholder="Insira o nome do autor" type="text">
                     </div>
+                </fieldset>
+    
+                <fieldset class="fieldset__normal__txt">
+                    <legend><h4>Cargo/função</h4></legend>
+                    <div class="content">
+                        <i class="fa fa-2x uil uil-briefcase-alt"></i>
+                        <input placeholder="Insira o cargo ou função ocupada pelo autor" type="text">
+                    </div>
+                </fieldset>
 
-                </section>          
+                <fieldset>
+                    <legend><h4>Frase</h4></legend>
+                    <div class="content"> 
+                        <i class="fa fa-2x uil uil-comment-dots"></i>
+                        <textarea class="fr-text" placeholder="Insira a frase" rows="4" cols="50" name="" form=""></textarea>
+                    </div>
+                </fieldset>
+        
+                <fieldset>
+                    <legend><h4>Data</h4></legend>
+                    <div class="content">
+                        <i class="fa fa-2x uil uil-calendar-alt"></i>
+                        <!-- Aqui o banco de dados vai informar a data atual -->
+                        <input disabled placeholder="" type="date">
+                    </div>
+                </fieldset>
+
+                
+            </section>          
+            
+            
     </main>
 
 </body>

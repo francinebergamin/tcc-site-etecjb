@@ -1,11 +1,10 @@
-
 main {
     margin-top: 2rem;
     gap: 2rem;
     display: grid;
     grid-template-columns: 0fr 1fr;
-    background-color: var(--color-white);
-    background-image: url(https://www.transparenttextures.com/patterns/pixel-weave.png);
+    justify-content: space-around;
+    justify-items: stretch;
 }
 
 
@@ -82,7 +81,7 @@ main {
     
         border: 0;
         /* border-bottom: 2px solid var(--color-light); */
-        background-image: url("https://www.transparenttextures.com/patterns/pixel-weave.png");
+        background: none;
         border-radius: 5px;
     }
     
@@ -91,7 +90,7 @@ main {
     }
 
     fieldset{
-        width: 40rem;
+        border-radius: 0.25rem;
         padding: 0.7rem;
         margin: 0rem 0 1rem 0;
         border: 1px solid var(--color-black);

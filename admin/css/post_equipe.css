@@ -1,0 +1,87 @@
+main {
+    margin-top: 2rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+}
+
+
+/* ÍCONES */
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa {
+    position: relative;
+    display: table-cell;
+    padding-right: 0.25rem;
+
+    /* width: 3.75rem; */
+    /* height: 4rem; */
+    
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+
+
+/* INSERIR DADOS */
+
+.content{
+    display: flex;
+}
+
+
+.sec__left{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+
+
+    /* FIELDSET*/
+    fieldset{
+        width: 40rem;
+        border-radius: 0.25rem;
+        padding: 0.7rem;
+        margin: 0rem 0 1rem 0;
+        border: 1px solid var(--color-black);
+    }
+    
+    fieldset input {
+        height: 100%;
+        width: 100%;
+    
+        background: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    .fieldset__normal__txt{
+        height: 4rem;
+    }
+    
+    legend {
+        padding: 0.5rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
