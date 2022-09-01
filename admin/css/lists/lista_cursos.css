@@ -1,0 +1,118 @@
+.news__btn {
+    width: 15rem;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+
+    background: none;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-repeat: no-repeat;
+    transition: var(--transition);
+}
+
+.news__btn:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-content{
+    width: 100%;
+}
+
+
+.title{
+    margin-bottom: 0.5rem;
+}
+
+.desc{
+    font-size: 1rem;
+}
+
+button.edit__btn{
+    background-color: none;
+    background: none;
+}
+
+.list-icon {
+    color: var(--color-white);
+    background: none;
+    font-size: 1.5rem;
+}
+
+.courses__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.card__wrapper{
+    margin-top: 2rem;
+    display: flex;
+    width: fit-content;
+    height: auto;
+}   
+
+.card{
+    height: fit-content;
+    width: fit-content;
+
+    padding: 0.7rem 1rem 0.5rem 1rem;
+
+    border: 0.15rem solid var(--color-black);
+    border-radius: 0.5rem;
+
+    border-top: 0.25rem solid var(--color-black);
+    border-bottom: 0.25rem solid var(--color-black);
+
+    border-right: 0;
+    border-left: 0 solid var(--color-black);
+
+    
+    z-index: -1;
+}
+
+.edit{
+    border-radius: 0.5rem;
+   
+    border-bottom: 0.25rem solid var(--color-primary-dark);
+    border-top: 0.25rem solid var(--color-primary-light);
+
+    border-left: 0;
+    border-right: 0;
+    /* border-right: 0.15rem solid var(--color-primary-dark); */
+
+    padding-right: 0.5rem;
+    padding-left: 0.75rem;
+
+    background-color: var(--color-primary);
+    box-shadow: -0.2rem 0rem 0.05rem var(--color-bg);
+
+    z-index: 1;
+    display: flex;
+    align-content: center;
+}
+
+.icons {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.break-line{
+    margin-top: 2rem;
+    background-color: var(--color-black);
+    height: 1rem;
+    padding: 0.05rem;
+}
