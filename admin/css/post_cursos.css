@@ -1,0 +1,159 @@
+main {
+    margin-top: 2rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    justify-content: space-between;
+    justify-items: stretch;
+}
+
+header {
+    flex-direction: column;
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+/* ÍCONES */
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa {
+    position: relative;
+    display: table-cell;
+    padding-right: 0.25rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* SEÇÕES */
+.sec1 {
+    width: 57vw;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.sec2{
+    width: auto;
+}
+
+/* ID e NOME */
+.id {
+    width: 4rem;
+    height: 4rem;
+}
+
+.name {
+    width: 30%;
+    height: 4rem;
+}
+
+.header {
+    gap: 1rem;
+    display: inline-flex;
+    align-items: center;
+    align-content: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+/* CORPO E SUBTITULO */
+fieldset {
+    border-radius: 0.25rem;
+    /* width: 25rem; */
+    padding: 0.7rem;
+    margin: 0rem 0 1rem 0;
+    border: 1px solid var(--color-black);
+}
+
+fieldset input {
+    height: 100%;
+    width: 100%;
+
+    background: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+legend {
+    padding: 0.5rem;
+}
+
+.content {
+    display: flex;
+}
+
+.content-text{
+    resize: vertical;
+    font-size: 1.2rem;
+    background: none;
+    width: 100%;
+    height: 100%;
+}
+
+.fieldset__1{
+    width: auto;
+    height: 4rem;
+}
+
+.fieldset__2{
+    width: 100%;
+    height: 4rem;
+}
+
+.fieldset__3{
+    width: auto;
+    height: 4rem;
+}
+
+.fieldset__4{
+    width: 21%;
+    height: 4rem;
+}
+
+.fieldset__5{
+    width: 20%;
+    height: 4rem;
+}
+
+.desc-text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    resize: none;
+    border: 0;
+    /* border-bottom: 2px solid var(--color-light); */
+    background: none;
+    height: 7.55rem;
+}
+
+
+/* INPUT NUMBER */
+.hour{
+    width: 100%;
+    display: flex;
+}
+
+.content span {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+input[type="button"]{
+    display: flex;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
