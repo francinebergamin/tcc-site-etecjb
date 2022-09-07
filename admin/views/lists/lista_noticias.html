@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/admin/css/main.css">
-    <link rel="stylesheet" href="/admin/css/lists/lista_noticias.css">
+    <link rel="stylesheet" href="/admin/css/lists/listas.css">
 
     <script src="/js/main.js"></script>
 </head>
@@ -23,7 +23,7 @@
         <h2>Lista de notícias</h2>
 
         <div class="buttons">
-            <button class="news__btn" onclick="location.href='/admin/views/posts/post_noticias.html'" type="button">
+            <button class="new__btn" onclick="location.href='/admin/views/posts/post_noticias.html'" type="button">
                 <i class="fa fa-2x uil uil-plus-circle"></i>
                 Publicar nova notícia
             </button>
@@ -31,111 +31,124 @@
     </header>
 
     <main>
-        <section class="sec__middle">
+        <div class="grid">
 
-            <!-- NOTICIA 1 -->
-            <fieldset class="list">
-                <div class="list__item">
-                    <i class="list-icon uil uil-text-fields"></i>
-                    <a href="/views/exemploNoticia.html">News 01</a>
-                    <p>Lorem ipsum dolor?</p>
-    
-                    <div class="icons">
-                        <button class="edit__btn" onclick="location.href='//link da noticia'" type="button">
-                            <i class="list-icon uil uil-edit"></i>
-                        </button>
-            
-                        <div class="trash__btn">
-                            <i class="list-icon uil uil-trash-alt"></i>
-                        </div>
+            <div class="card__wrapper">
+                <div class="card">
+                    <div class="title">
+                        <i class="header-icon uil uil-files-landscapes-alt"></i>
+                        <h4><a href="/admin/views/login.html" title="Notícia 01">Notícia 01</a></h4>
+                    </div>
+                    
+                    <div class="desc">
+                        <p>Set the fire to the conversations in the dark when I'll never forget you, even ain't my
+                            fault...
+                            You broke me again, but idfc... You were my everything, and now you're just somebody I used
+                            to know</p>
                     </div>
                 </div>
-            </fieldset>
-    
-            <!-- NOTICIA 2 -->
-            <fieldset class="list">
-                <div class="list__item">
-                    <i class="list-icon uil uil-text-fields"></i>
-                    <a href="/views/exemploNoticia.html">News 02</a>
-                    <p>Lorem ipsum dolor?</p>
-    
+
+                <div class="edit">
                     <div class="icons">
-                        <button class="edit__btn" onclick="location.href='/admin/views/post_noticias.html'" type="button">
-                            <i class="list-icon uil uil-edit"></i>
+                        <button class="edit__btn" onclick="location.href='/admin/views/post_news.html'" type="button">
+                            <i class="list-icon uil uil-pen"></i>
                         </button>
-            
+
                         <div class="trash__btn">
-                            <i class="list-icon uil uil-trash-alt"></i>
+                            <i class="list-icon uil uil-trash"></i>
                         </div>
                     </div>
-                </div>
-            </fieldset>
+                </div> <!-- fim: edit -->
+            </div> <!-- fim: card-wrapper -->
 
-            
-            <!-- NOTICIA 3 -->
-            <fieldset class="list">
-                <div class="list__item">
-                    <i class="list-icon uil uil-text-fields"></i>
-                    <a href="/views/exemploNoticia.html">News 03</a>
-                    <p>Lorem ipsum dolor?</p>
-    
-                    <div class="icons">
-                        <button class="edit__btn" onclick="location.href='/admin/views/post_noticias.html'" type="button">
-                            <i class="list-icon uil uil-edit"></i>
-                        </button>
-            
-                        <div class="trash__btn">
-                            <i class="list-icon uil uil-trash-alt"></i>
-                        </div>
+            <div class="card__wrapper">
+                <div class="card">
+                    <div class="title">
+                        <i class="header-icon uil uil-files-landscapes-alt"></i>
+                        <h4><a href="/admin/views/login.html" title="Notícia 02">Notícia 02</a></h4>
+                    </div>
+                    
+                    <div class="desc">
+                        <p>Set the fire to the conversations in the dark when I'll never forget you, even ain't my
+                            fault...
+                            You broke me again, but idfc... You were my everything, and now you're just somebody I used
+                            to know</p>
                     </div>
                 </div>
-            </fieldset>
 
-
-            
-            <!-- NOTICIA 4 -->
-            <fieldset class="list">
-                <div class="list__item">
-                    <i class="list-icon uil uil-text-fields"></i>
-                    <a href="/views/exemploNoticia.html">News 04</a>
-                    <p>Lorem ipsum dolor?</p>
-    
+                <div class="edit">
                     <div class="icons">
-                        <button class="edit__btn" onclick="location.href='/admin/views/post_noticias.html'" type="button">
-                            <i class="list-icon uil uil-edit"></i>
+                        <button class="edit__btn" onclick="location.href='/admin/views/post_news.html'" type="button">
+                            <i class="list-icon uil uil-pen"></i>
                         </button>
-            
+
                         <div class="trash__btn">
-                            <i class="list-icon uil uil-trash-alt"></i>
+                            <i class="list-icon uil uil-trash"></i>
                         </div>
                     </div>
-                </div>
-            </fieldset>
+                </div> <!-- fim: edit -->
+            </div> <!-- fim: card-wrapper -->
 
-
-            
-            <!-- NOTICIA 5 -->
-            <fieldset class="list">
-                <div class="list__item">
-                    <i class="list-icon uil uil-text-fields"></i>
-                    <a href="/views/exemploNoticia.html">News 05</a>
-                    <p>Lorem ipsum dolor?</p>
-    
-                    <div class="icons">
-                        <button class="edit__btn" onclick="location.href='/admin/views/post_noticias.html'" type="button">
-                            <i class="list-icon uil uil-edit"></i>
-                        </button>
-            
-                        <div class="trash__btn">
-                            <i class="list-icon uil uil-trash-alt"></i>
-                        </div>
+            <div class="card__wrapper">
+                <div class="card">
+                    <div class="title">
+                        <i class="header-icon uil uil-files-landscapes-alt"></i>
+                        <h4><a href="/admin/views/login.html" title="Notícia 03">Notícia 03</a></h4>
+                    </div>
+                    
+                    <div class="desc">
+                        <p>Set the fire to the conversations in the dark when I'll never forget you, even ain't my
+                            fault...
+                            You broke me again, but idfc... You were my everything, and now you're just somebody I used
+                            to know</p>
                     </div>
                 </div>
-            </fieldset>
 
-        </section>
-    </main>
-    
+                <div class="edit">
+                    <div class="icons">
+                        <button class="edit__btn" onclick="location.href='/admin/views/post_news.html'" type="button">
+                            <i class="list-icon uil uil-pen"></i>
+                        </button>
+
+                        <div class="trash__btn">
+                            <i class="list-icon uil uil-trash"></i>
+                        </div>
+                    </div>
+                </div> <!-- fim: edit -->
+            </div> <!-- fim: card-wrapper -->
+
+            <div class="card__wrapper">
+                <div class="card">
+                    <div class="title">
+                        <i class="header-icon uil uil-files-landscapes-alt"></i>
+                        <h4><a href="/admin/views/login.html" title="Notícia 04">Notícia 04</a></h4>
+                    </div>
+                    
+                    <div class="desc">
+                        <p>Set the fire to the conversations in the dark when I'll never forget you, even ain't my
+                            fault...
+                            You broke me again, but idfc... You were my everything, and now you're just somebody I used
+                            to know</p>
+                    </div>
+                </div>
+
+                <div class="edit">
+                    <div class="icons">
+                        <button class="edit__btn" onclick="location.href='/admin/views/post_news.html'" type="button">
+                            <i class="list-icon uil uil-pen"></i>
+                        </button>
+
+                        <div class="trash__btn">
+                            <i class="list-icon uil uil-trash"></i>
+                        </div>
+                    </div>
+                </div> <!-- fim: edit -->
+            </div> <!-- fim: card-wrapper -->
+
+        </div>
+    </div>
+</main>
+
 
 
 </body>

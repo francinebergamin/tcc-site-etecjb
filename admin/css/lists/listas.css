@@ -1,4 +1,4 @@
-.news__btn {
+.new__btn {
     width: 15rem;
     padding: 0.7rem;
     border-radius: 0.5rem;
@@ -17,27 +17,29 @@
     transition: var(--transition);
 }
 
-.news__btn:hover {
+.new__btn:hover {
     color: var(--color-white);
     background-color: var(--color-primary);
     transition: var(--transition);
     cursor: pointer;
 }
 
-.btn-content{
+.btn-content {
     width: 100%;
 }
 
-
-.title{
-    margin-bottom: 0.5rem;
+.title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.desc{
+.desc {
     font-size: 1rem;
 }
 
-button.edit__btn{
+button.edit__btn {
     background-color: none;
     background: none;
 }
@@ -48,42 +50,39 @@ button.edit__btn{
     font-size: 1.5rem;
 }
 
-.courses__grid {
+.list-icon:hover {
+    cursor: pointer;
+}
+
+.grid {
     margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
-.card__wrapper{
-   /*  margin-top: 2rem; */
+.card__wrapper {
+    /*  margin-top: 2rem; */
     display: flex;
+    align-items: center;
     width: fit-content;
     height: auto;
-}   
+}
 
-.card{
+.card {
     height: fit-content;
     width: fit-content;
 
     padding: 1rem;
 
-    border: 0.1rem solid var(--color-black);
     border-radius: 0.5rem;
-
-    border-top: 0.1rem solid var(--color-black);
-    border-bottom: 0.1rem solid var(--color-black);
-
+    border: 0.1rem solid var(--color-black);
     border-right: 0;
-    border-left: 0.1rem solid var(--color-black);
-
-    
-    z-index: -1;
 }
 
-.edit{
+.edit {
     border-radius: 0.5rem;
-   
+
     border-bottom: 0.25rem solid var(--color-primary-dark);
     border-top: 0.25rem solid var(--color-primary-light);
 
@@ -110,9 +109,29 @@ button.edit__btn{
     flex-direction: column;
 }
 
-.break-line{
+.break-line {
     margin-top: 2rem;
     background-color: var(--color-black);
     height: 1rem;
     padding: 0.05rem;
+}
+
+
+.header-icon {
+    transition: var(--transition);
+    color: var(--color-black);
+    border-left: 0.2rem solid var(--color-black);
+    border-radius: 0.2rem;
+    font-size: 1.8rem;
+}
+
+a {
+    transition: var(--transition);
+    color: var(--color-black);
+}
+
+.title:hover a,
+.title:hover .header-icon{
+    color: var(--color-primary);
+    border-color: var(--color-primary);
 }
