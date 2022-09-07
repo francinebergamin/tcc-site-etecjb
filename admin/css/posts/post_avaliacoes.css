@@ -45,11 +45,20 @@ header{
 
 /* INSERIR DADOS */
 
-.sec__left, .sec__right{
-    width: fit-content;
+.sec__left{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.sec__right{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;    
     align-items: stretch;
     justify-content: flex-start;
 }
@@ -87,7 +96,7 @@ header{
         resize: vertical;
     
         border: 0;
-        /* border-bottom: 2px solid var(--color-light); */
+        /* border-bottom: 2px s olid var(--color-light); */
         background: none;
         border-radius: 5px;
     }
