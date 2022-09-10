@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../../admin/css/posts/post_sobre.css">
 
-    <link rel="stylesheet" href="../../../js/main.js">
 </head>
 
 <body>
@@ -59,14 +58,37 @@
 
                 
                 <hr>
-                <video controls id="video-tag">
-                    <source id="video-source">
+                <video controls height="320" width="640" id="video-tag">
+                    <source id="video-source" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
             </div>
         </section>
     </main>
+    <script>
+        /* video teste */
+        const videoSrc = document.querySelector("#video-source");
+        const videoTag = document.querySelector("#video-tag");
+        const inputTag = document.querySelector("#input-tag");
+
+        inputTag.addEventListener('change',  readVideo);
+
+        function readVideo(event) {
+            console.log(event.target.files)
+            if (event.target.files && event.target.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function(e) {
+                console.log('loaded')
+                videoSrc.src = e.target.result
+                videoTag.load()
+                }.bind(this)
+
+                reader.readAsDataURL(event.target.files[0]);
+            }
+            }
+    </script>
 </body>
 
 </html>
