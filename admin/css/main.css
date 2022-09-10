@@ -1,4 +1,4 @@
-body{
+body {
     background-color: var(--color-bg);
     height: 100%;
     /* width: 100%; */
@@ -6,11 +6,16 @@ body{
 }
 
 
-.save, .clear, .cancel{
+/* BUTTONS */
+.save,
+.clear,
+.cancel {
     display: flex;
 }
 
-.btn__save, .btn__clear, .btn__cancel{
+.btn__save,
+.btn__clear,
+.btn__cancel {
     width: 10rem;
     display: flex;
     cursor: pointer;
@@ -21,31 +26,33 @@ body{
     color: var(--color-white);
     border: 2px solid var(--color-primary);
     transition: var(--transition);
-    background:var(--color-primary);
+    background: var(--color-primary);
     align-items: center;
     justify-content: center;
     flex-direction: row;
 }
 
-.btn__save:hover{
+.btn__save:hover {
     color: var(--color-primary);
     background: none;
 }
 
-.btn__clear, .btn__cancel{
+.btn__clear,
+.btn__cancel {
     border: 2px solid var(--color-black);
     color: var(--color-black);
     background: none;
 }
 
 
-.btn__clear:hover, .btn__cancel:hover{
+.btn__clear:hover,
+.btn__cancel:hover {
     border: 2px solid var(--color-black);
     color: var(--color-white);
     background-color: var(--color-black);
 }
 
-.buttons{
+.buttons {
     margin-top: 1rem;
     gap: 1rem;
     display: flex;
@@ -53,13 +60,15 @@ body{
     flex-direction: row;
 }
 
-.left__btns{
+.left__btns {
     justify-content: flex-end;
     gap: 1rem;
     display: flex;
 }
 
-/* ANEXO DA IMAGEM */
+
+
+/* IMAGE ATTACH */
 .attach__main {
     display: flex;
 }
@@ -70,7 +79,9 @@ body{
 }
 
 
-/* DISPLAY DE IMAGEM */
+
+
+/* IMAGE DISPLAY */
 .attach__content {
     width: auto;
     /* Muda o height aqui ->  height: auto;  */
@@ -95,3 +106,52 @@ body{
     object-fit: cover;
 }
 
+
+
+/* FIELDSET CONFIGS */
+fieldset {
+    border-radius: 0.25rem;
+    /* width: 25rem; */
+    padding: 0.7rem;
+    margin: 0rem 0 1rem 0;
+    border: 1px solid var(--color-black);
+}
+
+fieldset input {
+    height: 100%;
+    width: 100%;
+
+    background: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+legend {
+    padding: 0.5rem;
+}
+
+textarea{
+    background:none;
+}
+
+
+/* ICONS */
+.bigger-i {
+    font-size: 2em;
+}
+
+.normal-i {
+    position: relative;
+    display: table-cell;
+    padding-right: 0.25rem;
+
+    /* width: 3.75rem; */
+    /* height: 4rem; */
+
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}

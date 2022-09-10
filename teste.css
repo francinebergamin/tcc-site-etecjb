@@ -1,0 +1,67 @@
+main {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+header {
+  flex-direction: column;
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+
+/* SECTIONS */
+.sec__left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.sec__right {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+
+
+
+
+/* AVALIATIONS BODY */
+.content {
+  display: flex;
+}
+
+.fr-text {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  /* width: 50rem;
+      height: 3rem;
+  
+      padding: 0rem 2.2rem 0.5rem 0rem;
+      margin-bottom: 0.5rem; */
+
+  resize: vertical;
+
+  border: 0;
+  /* border-bottom: 2px s olid var(--color-light); */
+  background: none;
+  border-radius: 5px;
+}
+
+.cp-text {
+  height: 40rem;
+}
+
+.fieldset__normal__txt {
+  height: 4rem;
+}

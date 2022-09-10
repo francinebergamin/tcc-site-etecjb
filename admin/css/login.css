@@ -1,3 +1,13 @@
+/* COLOR PALETTE */
+:root {
+    --color-white: #fff;
+    --color-light: #e0e0e0;
+    --color-black: #121212;
+    --color-bg: #eeeeee;
+    --color-placeholder: rgb(143, 143, 143);
+}
+
+
 /* LOGIN CONTAINER */
 .nav__container {
     height: 100%;
@@ -208,13 +218,4 @@ input::placeholder {
     position: absolute;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
-}
-
-/* COLOR PALETTE */
-:root {
-    --color-white: #fff;
-    --color-light: #e0e0e0;
-    --color-black: #121212;
-    --color-bg: #eeeeee;
-    --color-placeholder: rgb(143, 143, 143);
 }

@@ -13,8 +13,7 @@ window.addEventListener('resize', () => {
         closeBtn.style.display = "none";
         openBtn.style.display = "none";
         menu.style.display = "flex";
-    } 
-    else {
+    } else {
         closeBtn.style.display = "none"
         openBtn.style.display = "inline-block";
         menu.style.display = "none";
@@ -34,7 +33,7 @@ closeBtn.addEventListener('click', () => {
 })
 
 // switch theme
-const getStyle = (element, style) => 
+const getStyle = (element, style) =>
     window
     .getComputedStyle(element)
     .getPropertyValue(style)
@@ -171,143 +170,530 @@ let sortRole = false;
 let start = 1;
 let initalPageQnt = 4;
 
-let equipeDocente = [
-    { name: "ABRAÃO LUZ SILVEIRA", role: "Professor(a)" },
-    { name: "ACYLINO LIMA JUNIOR", role: "Professor(a)" },
-    { name: "ADALBERTO IZAIAS MOREIRA JUNIOR", role: "Professor(a)" },
-    { name: "ALEXANDRA WIENDL NOGUEIRA FERRAROLI", role: "Professor(a)"},
-    { name: "ALEXANDRE JOSE SILVA", role: "Professor(a)"},
-    { name: "ALEXANDRE JUNQUEIRA", role: "Professor(a)"},
-    { name: "ANA CAROLINA BARBOSA ANGELI", role: "Professor(a)"},
-    { name: "ANA PAULA BELOTTO", role: "Professor(a)"},
-    { name: "ANDRE RODRIGO TIAGO DE CAMPOS BUENO", role: "Professor(a)"},
-    { name: "ANDREA SIMOCELLI", role: "Professor(a)"},
-    { name: "ANDREAS KOBERLE", role: "Professor(a)"},
-    { name: "ANTONIO CARLOS MONTINI ANTONACCI", role: "Professor(a)"},
-    { name: "José Carlos Pereira", role: "AUXILIAR DOCENTE ELETROTECNICA"},
-    { name: "ANDRE MORAES", role: "AUXILIAR DOCENTE INFORMATICA"},
-    { name: "DANIEL NARDIN", role: "AUXILIAR DOCENTE INFORMATICA"},
-    { name: "CACILDA MONTEIRO DE OLIVEIRA DELLA SANTINA", role: "Professor(a)"},
-    { name: "CARLOS AUGUSTO CRAVEIRO", role: "Professor(a)"},
-    { name: "CARLOS EDUARDO POPPI", role: "Professor(a)"},
-    { name: "CARLOS RODRIGO GIOMO", role: "Professor(a)"},
-    { name: "CÁSSIA OLIVEIRA MAZIERO", role: "Professor(a)"},
-    { name: "CECILIA GABRIEL", role: "Professor(a)"},
-    { name: "CLAUDIA CRISTINA JUNDI", role: "Professor(a)"},
-    { name: "CLAUDIA LIMA TRUZZI PERONDINI", role: "Professor(a)"},
-    { name: "CLEUSA APARECIDA DA SILVA ALBUQUERQUE", role: "Professor(a)"},
-    { name: "DAVID BARBOSA PERONDINI", role: "Professor(a)"},
-    { name: "EDUARDO MARTINHO RODRIGUES", role: "Professor(a)"},
-    { name: "ELAINE CRISTINA DE ALMEIDA ZANIN", role: "Professor(a)"},
-    { name: "ELIANE CAVALCANTE DA SILVA", role: "Professor(a)"},
-    { name: "ELIANE CRISTINA GALLO AQUINO", role: "Professor(a)"},
-    { name: "ELISABETH CRISTINA DOMINGUES DE SOUZA MARCHI", role: "Professor(a)"},
-    { name: "ELISANGELA LUZ SILVEIRA ALVES DE OLIVEIRA", role: "Professor(a)"},
-    { name: "ELOISA HELENA MACEDO WITTER", role: "Professor(a)"},
-    { name: "ELISANGELA LUZ SILVEIRA ALVES DE OLIVEIRA", role: "Professor(a)"},
-    { name: "ELZA REGINA PACE VERNIER", role: "Professor(a)"},
-    { name: "EMERSON RODRIGO BAIÃO", role: "Professor(a)"},
-    { name: "EVANDRO CESAR LEBET SCALVI", role: "Professor(a)"},
-    { name: "EVERLI APARECIDA CALEFFI CARDOSO", role: "Professor(a)"},
-    { name: "FERNANDO BARTHOLOMEU REIS DA SILVA CUNHA", role: "Professor(a)"},
-    { name: "FLAVIO ALEXANDRE CAMARGO MANCINI", role: "Professor(a)"},
-    { name: "GIULIANO CATELLI", role: "Professor(a)"},
-    { name: "GUILHERME ANTONIO BIM COPIANO", role: "Professor(a)"},
-    { name: "GUSTAVO ANTONIO VELHO", role: "Professor(a)"},
-    { name: "HÉLIO PÍNOLA FILHO", role: "Professor(a)"},
-    { name: "ITAILSON DA CUNHA", role: "Professor(a)"},
-    { name: "JOÃO DE FREITAS BUENO", role: "Professor(a)"},
-    { name: "JOHNNY MALAGODI CIAMBELLI", role: "Professor(a)"},
-    { name: "JOSE AMERICO MARSULO", role: "Professor(a)"},
-    { name: "JOSE ANGELO APARECIDO VANSAN", role: "Professor(a)"},
-    { name: "JOSE FELIPE FERRARESSO JUNIOR", role: "Professor(a)"},
-    { name: "JOSE FERNANDO GABRIEL", role: "Professor(a)"},
-    { name: "JUÇARA RODRIGUES JORGE FONTANA BASTOS", role: "Professor(a)"},
-    { name: "JULIO DE CARVALHO MONTEIRO DE BARROS", role: "Professor(a)"},
-    { name: "LARA PRISCILA DOMINGUES CAZOTTO", role: "Professor(a)"},
-    { name: "LEANDRA CAMARGO VERDURICO", role: "Professor(a)"},
-    { name: "LETÍCIA CAROLINE DE OLIVERIA", role: "Professor(a)"},
-    { name: "LIDIANE FARCHI DE PAULA", role: "Professor(a)"},
-    { name: "LUCIANA TERESA DIAS CAPPELINI", role: "Professor(a)"},
-    { name: "LUCIENE MARIA CASSIA EUGÊNIO", role: "Professor(a)"},
-    { name: "LUIS CARLOS OTTE", role: "Professor(a)"},
-    { name: "LUIS CARLOS ROMEIRO", role: "Professor(a)"},
-    { name: "LUIZ HENRIQUE BELLUCCI PETERLINI", role: "Professor(a)"},
-    { name: "MARA LÍGIA PACCE VERNIER BELLIX", role: "Professor(a)"},
-    { name: "MARCIA APARECIDA GODOI RONDINI NERY", role: "Professor(a)"},
-    { name: "MARIA LUCILDA PULCINELLI", role: "Professor(a)"},
-    { name: "MARILDA GUTIERREZ", role: "Professor(a)"},
-    { name: "MÁRIO CELSO GROU", role: "Professor(a)"},
-    { name: "MAURO FERNANDO ALVES RODRIGUES", role: "Professor(a)"},
-    { name: "NEIVALDO LOPES FERNANDES LAPA", role: "Professor(a)"},
-    { name: "OSVALDO MATEUS GOMES", role: "Professor(a)"},
-    { name: "PATRÍCIA CARLA DOS SANTOS MARTINS", role: "Professor(a)"},
-    { name: "PAULA CASSIANO ZANDONÁ DE OLIVEIRA", role: "Professor(a)"},
-    { name: "PAULO GUSTAVO DE SIQUEIRA LOPES", role: "Professor(a)"},
-    { name: "PAULO HENRIQUE MAZIERO", role: "Professor(a)"},
-    { name: "RAFAEL LUIS CAZOTO SEGATO", role: "Professor(a)"},
-    { name: "RAFAEL WILLIAM MARQUES", role: "Professor(a)"},
-    { name: "RENATA CARNEVALI LUSKO", role: "Professor(a)"},
-    { name: "RENATA EUGÊNIA BUENO GONÇALVES", role: "Professor(a)"},
-    { name: "RENATO AUGUSTO NASCIMENTO", role: "Professor(a)"},
-    { name: "RICARDO CAETANO BERTINI", role: "Professor(a)"},
-    { name: "RICARDO RODRIGUES DA SILVA", role: "Professor(a)"},
-    { name: "ROBERTA MARIA PAVANI MANZOLLI BERTONI", role: "Professor(a)"},
-    { name: "RODRIGO DE PAIVA LOPES", role: "Professor(a)"},
-    { name: "RUBENS CASTALDELLI CARLOS", role: "Professor(a)"},
-    { name: "SANDRA RAIMUNDA MARANCON", role: "Professor(a)"},
-    { name: "SERGIO AMAURI BERTONI", role: "Professor(a)"},
-    { name: "SERGIO LUIS DOMINGUES", role: "Professor(a)"},
-    { name: "SHEILA MARIA BARATELA", role: "Professor(a)"},
-    { name: "SILVIA HELENA GONCALVES DOS REIS SANTOS", role: "Professor(a)"},
-    { name: "SIMONE APARECIDA GRILLO PEREIRA DE LIMA", role: "Professor(a)"},
-    { name: "SONIA BUENO DE MORAES BELTRAME", role: "Professor(a)"},
-    { name: "SUSANA APARECIDA PADILHA MOLINA", role: "Professor(a)"},
-    { name: "TAIS ARMELIN ACCORDI DE PAIVA LOPES", role: "Professor(a)"},
-    { name: "TALINE BUENO PÍNOLA", role: "Professor(a)"},
-    { name: "TALITA ARIELA SAMPAIO E SILVA", role: "Professor(a)"},
-    { name: "THIAGO RODRIGUES GONÇALVES", role: "Professor(a)"},
-    { name: "TIAGO FERREIRA DE OLIVEIRA", role: "Professor(a)"},
-    { name: "VALDIR FERRARI", role: "Professor(a)"},
-    { name: "VANIA HELEN MORANDI BRUNETTO", role: "Professor(a)"},
-    { name: "VANIA RIBEIRO DE ALMEIDA AZEVEDO", role: "Professor(a)"},
-    { name: "WAGNER SEIZO HOKAMA", role: "Professor(a)" }
+let equipeDocente = [{
+        name: "ABRAÃO LUZ SILVEIRA",
+        role: "Professor(a)"
+    },
+    {
+        name: "ACYLINO LIMA JUNIOR",
+        role: "Professor(a)"
+    },
+    {
+        name: "ADALBERTO IZAIAS MOREIRA JUNIOR",
+        role: "Professor(a)"
+    },
+    {
+        name: "ALEXANDRA WIENDL NOGUEIRA FERRAROLI",
+        role: "Professor(a)"
+    },
+    {
+        name: "ALEXANDRE JOSE SILVA",
+        role: "Professor(a)"
+    },
+    {
+        name: "ALEXANDRE JUNQUEIRA",
+        role: "Professor(a)"
+    },
+    {
+        name: "ANA CAROLINA BARBOSA ANGELI",
+        role: "Professor(a)"
+    },
+    {
+        name: "ANA PAULA BELOTTO",
+        role: "Professor(a)"
+    },
+    {
+        name: "ANDRE RODRIGO TIAGO DE CAMPOS BUENO",
+        role: "Professor(a)"
+    },
+    {
+        name: "ANDREA SIMOCELLI",
+        role: "Professor(a)"
+    },
+    {
+        name: "ANDREAS KOBERLE",
+        role: "Professor(a)"
+    },
+    {
+        name: "ANTONIO CARLOS MONTINI ANTONACCI",
+        role: "Professor(a)"
+    },
+    {
+        name: "José Carlos Pereira",
+        role: "AUXILIAR DOCENTE ELETROTECNICA"
+    },
+    {
+        name: "ANDRE MORAES",
+        role: "AUXILIAR DOCENTE INFORMATICA"
+    },
+    {
+        name: "DANIEL NARDIN",
+        role: "AUXILIAR DOCENTE INFORMATICA"
+    },
+    {
+        name: "CACILDA MONTEIRO DE OLIVEIRA DELLA SANTINA",
+        role: "Professor(a)"
+    },
+    {
+        name: "CARLOS AUGUSTO CRAVEIRO",
+        role: "Professor(a)"
+    },
+    {
+        name: "CARLOS EDUARDO POPPI",
+        role: "Professor(a)"
+    },
+    {
+        name: "CARLOS RODRIGO GIOMO",
+        role: "Professor(a)"
+    },
+    {
+        name: "CÁSSIA OLIVEIRA MAZIERO",
+        role: "Professor(a)"
+    },
+    {
+        name: "CECILIA GABRIEL",
+        role: "Professor(a)"
+    },
+    {
+        name: "CLAUDIA CRISTINA JUNDI",
+        role: "Professor(a)"
+    },
+    {
+        name: "CLAUDIA LIMA TRUZZI PERONDINI",
+        role: "Professor(a)"
+    },
+    {
+        name: "CLEUSA APARECIDA DA SILVA ALBUQUERQUE",
+        role: "Professor(a)"
+    },
+    {
+        name: "DAVID BARBOSA PERONDINI",
+        role: "Professor(a)"
+    },
+    {
+        name: "EDUARDO MARTINHO RODRIGUES",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELAINE CRISTINA DE ALMEIDA ZANIN",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELIANE CAVALCANTE DA SILVA",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELIANE CRISTINA GALLO AQUINO",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELISABETH CRISTINA DOMINGUES DE SOUZA MARCHI",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELISANGELA LUZ SILVEIRA ALVES DE OLIVEIRA",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELOISA HELENA MACEDO WITTER",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELISANGELA LUZ SILVEIRA ALVES DE OLIVEIRA",
+        role: "Professor(a)"
+    },
+    {
+        name: "ELZA REGINA PACE VERNIER",
+        role: "Professor(a)"
+    },
+    {
+        name: "EMERSON RODRIGO BAIÃO",
+        role: "Professor(a)"
+    },
+    {
+        name: "EVANDRO CESAR LEBET SCALVI",
+        role: "Professor(a)"
+    },
+    {
+        name: "EVERLI APARECIDA CALEFFI CARDOSO",
+        role: "Professor(a)"
+    },
+    {
+        name: "FERNANDO BARTHOLOMEU REIS DA SILVA CUNHA",
+        role: "Professor(a)"
+    },
+    {
+        name: "FLAVIO ALEXANDRE CAMARGO MANCINI",
+        role: "Professor(a)"
+    },
+    {
+        name: "GIULIANO CATELLI",
+        role: "Professor(a)"
+    },
+    {
+        name: "GUILHERME ANTONIO BIM COPIANO",
+        role: "Professor(a)"
+    },
+    {
+        name: "GUSTAVO ANTONIO VELHO",
+        role: "Professor(a)"
+    },
+    {
+        name: "HÉLIO PÍNOLA FILHO",
+        role: "Professor(a)"
+    },
+    {
+        name: "ITAILSON DA CUNHA",
+        role: "Professor(a)"
+    },
+    {
+        name: "JOÃO DE FREITAS BUENO",
+        role: "Professor(a)"
+    },
+    {
+        name: "JOHNNY MALAGODI CIAMBELLI",
+        role: "Professor(a)"
+    },
+    {
+        name: "JOSE AMERICO MARSULO",
+        role: "Professor(a)"
+    },
+    {
+        name: "JOSE ANGELO APARECIDO VANSAN",
+        role: "Professor(a)"
+    },
+    {
+        name: "JOSE FELIPE FERRARESSO JUNIOR",
+        role: "Professor(a)"
+    },
+    {
+        name: "JOSE FERNANDO GABRIEL",
+        role: "Professor(a)"
+    },
+    {
+        name: "JUÇARA RODRIGUES JORGE FONTANA BASTOS",
+        role: "Professor(a)"
+    },
+    {
+        name: "JULIO DE CARVALHO MONTEIRO DE BARROS",
+        role: "Professor(a)"
+    },
+    {
+        name: "LARA PRISCILA DOMINGUES CAZOTTO",
+        role: "Professor(a)"
+    },
+    {
+        name: "LEANDRA CAMARGO VERDURICO",
+        role: "Professor(a)"
+    },
+    {
+        name: "LETÍCIA CAROLINE DE OLIVERIA",
+        role: "Professor(a)"
+    },
+    {
+        name: "LIDIANE FARCHI DE PAULA",
+        role: "Professor(a)"
+    },
+    {
+        name: "LUCIANA TERESA DIAS CAPPELINI",
+        role: "Professor(a)"
+    },
+    {
+        name: "LUCIENE MARIA CASSIA EUGÊNIO",
+        role: "Professor(a)"
+    },
+    {
+        name: "LUIS CARLOS OTTE",
+        role: "Professor(a)"
+    },
+    {
+        name: "LUIS CARLOS ROMEIRO",
+        role: "Professor(a)"
+    },
+    {
+        name: "LUIZ HENRIQUE BELLUCCI PETERLINI",
+        role: "Professor(a)"
+    },
+    {
+        name: "MARA LÍGIA PACCE VERNIER BELLIX",
+        role: "Professor(a)"
+    },
+    {
+        name: "MARCIA APARECIDA GODOI RONDINI NERY",
+        role: "Professor(a)"
+    },
+    {
+        name: "MARIA LUCILDA PULCINELLI",
+        role: "Professor(a)"
+    },
+    {
+        name: "MARILDA GUTIERREZ",
+        role: "Professor(a)"
+    },
+    {
+        name: "MÁRIO CELSO GROU",
+        role: "Professor(a)"
+    },
+    {
+        name: "MAURO FERNANDO ALVES RODRIGUES",
+        role: "Professor(a)"
+    },
+    {
+        name: "NEIVALDO LOPES FERNANDES LAPA",
+        role: "Professor(a)"
+    },
+    {
+        name: "OSVALDO MATEUS GOMES",
+        role: "Professor(a)"
+    },
+    {
+        name: "PATRÍCIA CARLA DOS SANTOS MARTINS",
+        role: "Professor(a)"
+    },
+    {
+        name: "PAULA CASSIANO ZANDONÁ DE OLIVEIRA",
+        role: "Professor(a)"
+    },
+    {
+        name: "PAULO GUSTAVO DE SIQUEIRA LOPES",
+        role: "Professor(a)"
+    },
+    {
+        name: "PAULO HENRIQUE MAZIERO",
+        role: "Professor(a)"
+    },
+    {
+        name: "RAFAEL LUIS CAZOTO SEGATO",
+        role: "Professor(a)"
+    },
+    {
+        name: "RAFAEL WILLIAM MARQUES",
+        role: "Professor(a)"
+    },
+    {
+        name: "RENATA CARNEVALI LUSKO",
+        role: "Professor(a)"
+    },
+    {
+        name: "RENATA EUGÊNIA BUENO GONÇALVES",
+        role: "Professor(a)"
+    },
+    {
+        name: "RENATO AUGUSTO NASCIMENTO",
+        role: "Professor(a)"
+    },
+    {
+        name: "RICARDO CAETANO BERTINI",
+        role: "Professor(a)"
+    },
+    {
+        name: "RICARDO RODRIGUES DA SILVA",
+        role: "Professor(a)"
+    },
+    {
+        name: "ROBERTA MARIA PAVANI MANZOLLI BERTONI",
+        role: "Professor(a)"
+    },
+    {
+        name: "RODRIGO DE PAIVA LOPES",
+        role: "Professor(a)"
+    },
+    {
+        name: "RUBENS CASTALDELLI CARLOS",
+        role: "Professor(a)"
+    },
+    {
+        name: "SANDRA RAIMUNDA MARANCON",
+        role: "Professor(a)"
+    },
+    {
+        name: "SERGIO AMAURI BERTONI",
+        role: "Professor(a)"
+    },
+    {
+        name: "SERGIO LUIS DOMINGUES",
+        role: "Professor(a)"
+    },
+    {
+        name: "SHEILA MARIA BARATELA",
+        role: "Professor(a)"
+    },
+    {
+        name: "SILVIA HELENA GONCALVES DOS REIS SANTOS",
+        role: "Professor(a)"
+    },
+    {
+        name: "SIMONE APARECIDA GRILLO PEREIRA DE LIMA",
+        role: "Professor(a)"
+    },
+    {
+        name: "SONIA BUENO DE MORAES BELTRAME",
+        role: "Professor(a)"
+    },
+    {
+        name: "SUSANA APARECIDA PADILHA MOLINA",
+        role: "Professor(a)"
+    },
+    {
+        name: "TAIS ARMELIN ACCORDI DE PAIVA LOPES",
+        role: "Professor(a)"
+    },
+    {
+        name: "TALINE BUENO PÍNOLA",
+        role: "Professor(a)"
+    },
+    {
+        name: "TALITA ARIELA SAMPAIO E SILVA",
+        role: "Professor(a)"
+    },
+    {
+        name: "THIAGO RODRIGUES GONÇALVES",
+        role: "Professor(a)"
+    },
+    {
+        name: "TIAGO FERREIRA DE OLIVEIRA",
+        role: "Professor(a)"
+    },
+    {
+        name: "VALDIR FERRARI",
+        role: "Professor(a)"
+    },
+    {
+        name: "VANIA HELEN MORANDI BRUNETTO",
+        role: "Professor(a)"
+    },
+    {
+        name: "VANIA RIBEIRO DE ALMEIDA AZEVEDO",
+        role: "Professor(a)"
+    },
+    {
+        name: "WAGNER SEIZO HOKAMA",
+        role: "Professor(a)"
+    }
 ]
 
-let equipeEscolar = [
-    { name: "Ana Paula Belotto", role: "Diretor da Escola e Assistente Técnico Administrativo" },
-    { name: "Aparecida Rosa da Silva", role: "Diretor de Serviço Administrativos e Acadêmico" },
-    { name: "André Luis de Moraes", role: "Auxiliar Docente" },
-    { name: "Daniel Nardin", role: "Auxiliar Docente" },
-    { name: "José Carlos Pereira", role: "Auxiliar Docente" },
-    { name: "Andréa Fernanda Andrade Barbosa", role: "Agente Técnico" },
-    { name: "Eneide Maria Bonaldo", role: "Agente Técnico" },
-    { name: "Lais Gakyia Spinella", role: "Agente Técnico" },
-    { name: "Lais Martins Bortolotti", role: "Agente Técnico" },
-    { name: "Lucimara Aparecida Alves de Souza", role: "Agente Técnico" },
-    { name: "Monica Marinho", role: "Agente Técnico" },
-    { name: "Maximiana da Silva", role: "Agente Técnico" },
-    { name: "Regina Célia Macedo", role: "Agente Técnico" },
-    { name: "Ronivaldo Hemógenes Leme da Silva", role: "Agente Técnico" },
-    { name: "Rosângela Aparecida Quintana", role: "Agente Técnico" },
-    { name: "Hersilia Caleffi de Souza", role: "Professor Readaptado" },
-    { name: "Luis Carlos Otte", role: "Professor Readaptado" }
+let equipeEscolar = [{
+        name: "Ana Paula Belotto",
+        role: "Diretor da Escola e Assistente Técnico Administrativo"
+    },
+    {
+        name: "Aparecida Rosa da Silva",
+        role: "Diretor de Serviço Administrativos e Acadêmico"
+    },
+    {
+        name: "André Luis de Moraes",
+        role: "Auxiliar Docente"
+    },
+    {
+        name: "Daniel Nardin",
+        role: "Auxiliar Docente"
+    },
+    {
+        name: "José Carlos Pereira",
+        role: "Auxiliar Docente"
+    },
+    {
+        name: "Andréa Fernanda Andrade Barbosa",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Eneide Maria Bonaldo",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Lais Gakyia Spinella",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Lais Martins Bortolotti",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Lucimara Aparecida Alves de Souza",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Monica Marinho",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Maximiana da Silva",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Regina Célia Macedo",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Ronivaldo Hemógenes Leme da Silva",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Rosângela Aparecida Quintana",
+        role: "Agente Técnico"
+    },
+    {
+        name: "Hersilia Caleffi de Souza",
+        role: "Professor Readaptado"
+    },
+    {
+        name: "Luis Carlos Otte",
+        role: "Professor Readaptado"
+    }
 ]
 
-let conselhoEscolar = [
-    { name: "Ana Paula Belotto", role: "Diretora de Escola" },
-    { name: "Aparecida Rosa Silva", role: "Representante da Diretoria de Serviços Administrativos" },
-    { name: "Laís Martins Bortolotti", role: "Representante da Diretoria de Serviços Acadêmicos" },
-    { name: "Mario Celso Grou", role: "Representante dos professores do Ensino Médio" },
-    { name: "Rubens Castaldelli Carlos", role: "Representante dos professores do Ensino Técnico" },
-    { name: "Lucimara Aparecida Alves de Souza", role: "Representante dos Servidores Técnicos Administrativos" },
-    { name: "Agatha Marchi Cavalini", role: "Representante dos alunos do Ensino Médio e Etim" },
-    { name: "Sergio Luis Domingues", role: "Representante do Sindicato dos Trabalhadores" },
-    { name: "Marcelo José Viam Ribeiro", role: "Representante do Poder Municipal" },
-    { name: "Vinicius Martins", role: "Representante dos ex-alunos" },
-    { name: "Gilson Marques", role: "Representante dos alunos do Ensino Técnico" },
-    { name: "Carlos Augusto Craveiro", role: "Representante dos empresários vinculado aos cursos" },
-    { name: "Mônica Ferreira Duarte", role: "Representante dos pais" }
+let conselhoEscolar = [{
+        name: "Ana Paula Belotto",
+        role: "Diretora de Escola"
+    },
+    {
+        name: "Aparecida Rosa Silva",
+        role: "Representante da Diretoria de Serviços Administrativos"
+    },
+    {
+        name: "Laís Martins Bortolotti",
+        role: "Representante da Diretoria de Serviços Acadêmicos"
+    },
+    {
+        name: "Mario Celso Grou",
+        role: "Representante dos professores do Ensino Médio"
+    },
+    {
+        name: "Rubens Castaldelli Carlos",
+        role: "Representante dos professores do Ensino Técnico"
+    },
+    {
+        name: "Lucimara Aparecida Alves de Souza",
+        role: "Representante dos Servidores Técnicos Administrativos"
+    },
+    {
+        name: "Agatha Marchi Cavalini",
+        role: "Representante dos alunos do Ensino Médio e Etim"
+    },
+    {
+        name: "Sergio Luis Domingues",
+        role: "Representante do Sindicato dos Trabalhadores"
+    },
+    {
+        name: "Marcelo José Viam Ribeiro",
+        role: "Representante do Poder Municipal"
+    },
+    {
+        name: "Vinicius Martins",
+        role: "Representante dos ex-alunos"
+    },
+    {
+        name: "Gilson Marques",
+        role: "Representante dos alunos do Ensino Técnico"
+    },
+    {
+        name: "Carlos Augusto Craveiro",
+        role: "Representante dos empresários vinculado aos cursos"
+    },
+    {
+        name: "Mônica Ferreira Duarte",
+        role: "Representante dos pais"
+    }
 ]
 
 let tableData = equipeDocente
@@ -317,14 +703,14 @@ let i = 0;
 function setTableData(data) {
     tableData = data;
     i = 0;
-    sortName = false; 
+    sortName = false;
     sortRole = false;
     start = 1;
     initalPageQnt = 4;
     clearIcon();
     setCurrentTeam(data);
     loadTableData(tableData);
-} 
+}
 
 function setCurrentTeam(team) {
     const teams = document.querySelectorAll('.team');
@@ -361,7 +747,7 @@ function loadTableData(tableData) {
     // Draws pagination
     console.log(start)
     loadPagination(tablePages, dataPerPage, initalPageQnt, start)
-    
+
     tableBody.innerHTML = dataHtml;
 }
 
@@ -370,7 +756,7 @@ function loadPagination(tablePages, dataPerPage, displayPageQnt, startPG) {
         tablePages.style.display = "flex";
         tablePages.innerHTML = '';
         const pageQnt = Math.ceil(tableData.length / dataPerPage);
-        
+
         if (pageQnt >= displayPageQnt) {
             tablePages.innerHTML += `<i class="uil uil-angle-double-left page-icon prevPages"></i>`
             for (startPG; startPG <= displayPageQnt; startPG++) {
@@ -382,21 +768,21 @@ function loadPagination(tablePages, dataPerPage, displayPageQnt, startPG) {
 
             const prevPages = document.querySelector('.prevPages');
             const nextPages = document.querySelector('.nextPages');
-    
+
             prevPages.addEventListener('click', () => {
                 if (displayPageQnt > 4) {
                     startPG -= 4;
-                    displayPageQnt = Math.ceil(displayPageQnt/4.0) * 4;
+                    displayPageQnt = Math.ceil(displayPageQnt / 4.0) * 4;
                     displayPageQnt -= 4;
                     start = displayPageQnt - 3;
-                    loadPagination(tablePages, dataPerPage, displayPageQnt, start); 
+                    loadPagination(tablePages, dataPerPage, displayPageQnt, start);
                 }
             })
-    
+
             nextPages.addEventListener('click', () => {
                 tablePages.innerHTML = '';
                 if (startPG > pageQnt) {
-                    startPG = (Math.ceil(pageQnt/4.0) * 4) - 3;
+                    startPG = (Math.ceil(pageQnt / 4.0) * 4) - 3;
                 } else if (startPG + displayPageQnt < pageQnt) {
                     displayPageQnt += 4;
                 } else {
@@ -445,7 +831,9 @@ function sortColumn(columnName) {
     }
 
     if (sortDirection) {
-        tableData = tableData.sort(function (a, b) { return a[columnName] > b[columnName] ? 1 : -1; });
+        tableData = tableData.sort(function (a, b) {
+            return a[columnName] > b[columnName] ? 1 : -1;
+        });
         columnI.className = "";
         columnI.classList.add('uil', 'uil-angle-down', 'th-icon');
     } else {
@@ -475,8 +863,8 @@ const coursesBttns = document.querySelectorAll('.course__btn');
 
 coursesBttns.forEach(btn => {
     btn.addEventListener('click', () => {
-        document.body.scrollTop = 0; 
-        document.documentElement.scrollTop = 0; 
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
         overlayBlur.style.display = 'block';
         overlay.style.display = 'flex';
     })
@@ -495,11 +883,11 @@ overlayBlur.addEventListener('click', () => {
 function showPassword() {
     var x = document.getElementById("loginPassword");
     if (x.type === "password") {
-      x.type = "text";
+        x.type = "text";
     } else {
-      x.type = "password";
+        x.type = "password";
     }
-  }
+}
 
 const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".options-container");
@@ -507,12 +895,34 @@ const optionsContainer = document.querySelector(".options-container");
 const optionsList = document.querySelectorAll(".option");
 
 selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
+    optionsContainer.classList.toggle("active");
 });
 
 optionsList.forEach(o => {
-  o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
-  });
+    o.addEventListener("click", () => {
+        selected.innerHTML = o.querySelector("label").innerHTML;
+        optionsContainer.classList.remove("active");
+    });
 });
+
+/* video teste */
+const videoSrc = document.querySelector("#video-source");
+const videoTag = document.querySelector("#video-tag");
+const inputTag = document.querySelector("#input-tag");
+
+inputTag.addEventListener('change',  readVideo)
+
+function readVideo(event) {
+  console.log(event.target.files)
+  if (event.target.files && event.target.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      console.log('loaded')
+      videoSrc.src = e.target.result
+      videoTag.load()
+    }.bind(this)
+
+    reader.readAsDataURL(event.target.files[0]);
+  }
+}

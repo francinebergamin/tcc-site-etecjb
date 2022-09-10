@@ -12,10 +12,9 @@
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
 
-    <link href="dist/float-labels.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/admin/css/main.css">
-    <link rel="stylesheet" href="/admin/css/posts/post_noticias.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../../admin/css/posts/post_noticias.css">
 </head>
 <body>
     <header>
@@ -43,7 +42,7 @@
                 <fieldset class="id">
                     <legend><h4>ID</h4></legend>
                     <div class="content">
-                        <i class="fa fa-2x uil uil-list-ol"></i>
+                        <i class="normal-i bigger-i uil uil-list-ol"></i>
                         <input disabled value="0" type="number">
                         <!-- o value vai ser o valor do PK no Banco  -->
                     </div>
@@ -52,7 +51,7 @@
                 <fieldset class="title">
                     <legend><h4>Título</h4></legend>
                     <div class="content">
-                        <i class="fa fa-2x uil uil-text-fields"></i>
+                        <i class="normal-i bigger-i uil uil-text-fields"></i>
                         <input placeholder="Insira o título da notícia" type="text">
                     </div>
                 </fieldset>
@@ -60,7 +59,7 @@
                 <fieldset class="data">
                     <legend><h4>Data</h4></legend>
                     <div class="content">
-                        <i class="fa fa-2x uil uil-calendar-alt"></i>
+                        <i class="normal-i bigger-i uil uil-calendar-alt"></i>
                         <!-- Aqui o banco de dados vai informar a data atual -->
                         <input disabled placeholder="01/11/2022 " type="date">
                     </div>
@@ -70,7 +69,7 @@
             <fieldset>
                 <legend><h4>Subtítulo</h4></legend>
                 <div class="subtitle content"> 
-                    <i class="fa fa-2x uil uil-comment-dots"></i>
+                    <i class="normal-i bigger-i uil uil-comment-dots"></i>
                     <textarea class="st-text" placeholder="Insira o subtítulo da notícia"></textarea>
                 </div>
             </fieldset>
@@ -78,7 +77,7 @@
             <fieldset class="attach">
                 <legend><h4>Anexo: foto e/ou vídeo</h4></legend>
                 <div class="attach__main">
-                    <i class="fa fa-2x uil uil-file-search-alt"></i>
+                    <i class="normal-i bigger-i uil uil-file-search-alt"></i>
                     <!-- <input type="file" accept="image/*, video/*"> -->
                     <input type="file" accept=".jpg, .jpeg, .png, .mp4, .avi" id="image[]" multiple onchange="addImagesToPreview(event)" />    
             </fieldset>
@@ -93,7 +92,7 @@
             <fieldset>
                 <legend><h4>Corpo</h4></legend>
                 <div class="content">
-                    <i class="fa fa-2x uil uil-subject"></i>
+                    <i class="normal-i bigger-i uil uil-subject"></i>
                     <textarea class="cp-text" placeholder="Insira o corpo da notícia" rows="4" cols="50" name="comment" form=""></textarea>
                 </div>
             </fieldset>

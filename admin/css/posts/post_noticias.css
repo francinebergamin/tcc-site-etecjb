@@ -12,7 +12,7 @@ main {
     justify-items: stretch;
 }
 
-header{
+header {
     flex-direction: column;
     display: flex;
     align-content: flex-start;
@@ -20,34 +20,10 @@ header{
 }
 
 
-/* ÍCONES */
-.fa-2x {
-    font-size: 2em;
-}
-
-.fa {
-    position: relative;
-    display: table-cell;
-    padding-right: 0.25rem;
-
-    /* width: 3.75rem; */
-    /* height: 4rem; */
-    
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-start;
-}
 
 
-
-
-
-/* INSERIR DADOS */
-
-.sec1{
+/* SECTIONS */
+.sec1 {
     width: 45rem;
     display: flex;
     flex-direction: column;
@@ -56,82 +32,60 @@ header{
     justify-content: flex-start;
 }
 
-    /* ID, TITULO E DATA */
-    .header{
-        gap: 1rem;
-        display: inline-flex;
-        align-items: center;
-        align-content: stretch;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        flex-direction: row;
-    }
-    
+/* ID, TITLE AND DATE */
+.header {
+    gap: 1rem;
+    display: inline-flex;
+    align-items: center;
+    align-content: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
 
 
+/* NEWS BODY & SUBTITLE*/
+.content {
+    display: flex;
+}
 
-    /* CORPO E SUBTITULO */
-    .content{
-        display: flex;
-    }
+.st-text {
+    height: 0.7rem;
+}
 
-    .st-text{
-        height: 0.7rem;
-    }
+.subtitle {
+    height: 4rem;
+}
 
-    .subtitle{
-        height: 4rem;
-    }
+.st-text,
+.cp-text {
+    font-size: medium;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    padding: 0rem 4rem 0.5rem 0rem;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    border: 0;
+    /* border-bottom: 2px solid var(--color-light); */
+    background: none;
+}
 
-    .st-text, .cp-text{
-        font-size: medium;
-        font-weight: 500;
-        width: 100%;
-        height: 100%;
-        padding: 0rem 4rem 0.5rem 0rem;
-        margin-bottom: 0.5rem;
-        resize: vertical;
-        border: 0;
-        /* border-bottom: 2px solid var(--color-light); */
-        background: none;
-    }
-    
-    .cp-text{
-        height: 27rem;
-    }
+.cp-text {
+    height: 27rem;
+}
 
-    fieldset{
-        border-radius: 0.25rem;
-        /* width: 25rem; */
-        padding: 0.7rem;
-        margin: 0rem 0 1rem 0;
-        border: 1px solid var(--color-black);
-    }
-    
-    fieldset input {
-        height: 100%;
-        width: 100%;
-    
-        background: none;
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-    
-    .id{
-        width: 4rem;
-        height: 4rem;
-    }
-    
-    .title{
-        width: 32rem;
-        height: 4rem;
-    }
-    
-    .data{
-        width: 0rem;
-        height: 4rem;
-    }
+.id {
+    width: 4rem;
+    height: 4rem;
+}
 
-    legend {
-        padding: 0.5rem;
-    }
+.title {
+    width: 32rem;
+    height: 4rem;
+}
+
+.data {
+    width: 0rem;
+    height: 4rem;
+}

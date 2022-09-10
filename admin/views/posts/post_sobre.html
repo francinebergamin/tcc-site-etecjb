@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Admin Sobre Nós</title>
 
     <link rel="icon" type="image/png" href="/imgs/logo/jb.png">
@@ -12,11 +13,60 @@
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
 
-    <link href="dist/float-labels.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/admin/css/posts/post_sobre.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../../admin/css/posts/post_sobre.css">
+
+    <link rel="stylesheet" href="../../../js/main.js">
 </head>
+
 <body>
-    
+    <header>
+        <h2>Inserir vídeo apresentativo</h2>
+
+        <div class="buttons">
+            <div class="save">
+                <button class="btn__save" type="submit">Salvar</button>
+            </div>
+
+            <div class="clear">
+                <button class="btn__clear" type="reset">Limpar</button>
+            </div>
+
+            <div class="cancel">
+                <button class="btn__cancel">Cancelar</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sec__left">
+            <div class="pic">
+                <fieldset class="attach">
+                    <legend>
+                        <h4>Vídeo apresentativo da ETEC JB</h4>
+                    </legend>
+                    <div class="attach__main">
+                        <i class="normal-i bigger-i uil uil-file-search-alt"></i>
+                        <!-- WARNING: 
+                            =====> 1. THE PREVIEW FUNCTION IS NOT ALLOWING TO DISPLAY ANY VIDEO ON THE SCREEN, BUT YOU STILL CAN UPLOAD IT
+                            =====> 2. THE FUNCTION NEEDS TO BE FIXED
+                        -->
+
+                        <input type="file" accept="video/*" id="input-tag" />
+
+                </fieldset>
+
+                
+                <hr>
+                <video controls id="video-tag">
+                    <source id="video-source">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

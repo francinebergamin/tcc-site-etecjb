@@ -14,24 +14,9 @@ header {
     align-items: flex-start;
 }
 
-/* ÍCONES */
-.fa-2x {
-    font-size: 2em;
-}
 
-.fa {
-    position: relative;
-    display: table-cell;
-    padding-right: 0.25rem;
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-start;
-}
 
-/* SEÇÕES */
+/* SECTIONS */
 .sec1 {
     width: 57vw;
     display: flex;
@@ -41,11 +26,11 @@ header {
     justify-content: flex-start;
 }
 
-.sec2{
+.sec2 {
     width: auto;
 }
 
-/* ID e NOME */
+/* ID & NAME */
 .id {
     width: 4rem;
     height: 4rem;
@@ -66,33 +51,12 @@ header {
     flex-direction: row;
 }
 
-/* CORPO E SUBTITULO */
-fieldset {
-    border-radius: 0.25rem;
-    /* width: 25rem; */
-    padding: 0.7rem;
-    margin: 0rem 0 1rem 0;
-    border: 1px solid var(--color-black);
-}
-
-fieldset input {
-    height: 100%;
-    width: 100%;
-
-    background: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-legend {
-    padding: 0.5rem;
-}
-
+/* COURSES BODY & DESCRIPTION*/
 .content {
     display: flex;
 }
 
-.content-text{
+.content-text {
     resize: vertical;
     font-size: 1.2rem;
     background: none;
@@ -100,32 +64,32 @@ legend {
     height: 100%;
 }
 
-.fieldset__1{
+.fieldset__1 {
     width: auto;
     height: 4rem;
 }
 
-.fieldset__2{
+.fieldset__2 {
     width: 100%;
     height: 4rem;
 }
 
-.fieldset__3{
+.fieldset__3 {
     width: auto;
     height: 4rem;
 }
 
-.fieldset__4{
+.fieldset__4 {
     width: 21%;
     height: 4rem;
 }
 
-.fieldset__5{
+.fieldset__5 {
     width: 20%;
     height: 4rem;
 }
 
-.desc-text{
+.desc-text {
     font-size: 1.2rem;
     font-weight: 500;
     width: 100%;
@@ -138,8 +102,8 @@ legend {
 }
 
 
-/* INPUT NUMBER */
-.hour{
+/* NUMBER INPUT OF VACANCIES */
+.hour { 
     width: 100%;
     display: flex;
 }
@@ -151,7 +115,7 @@ legend {
     font-weight: 600;
 }
 
-input[type="button"]{
+input[type="button"] {
     display: flex;
     cursor: pointer;
     font-weight: 600;
