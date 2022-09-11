@@ -167,23 +167,28 @@ textarea {
     align-items: flex-start;
 }
 
+
+
+/* RICH TEXT */
 .options {
+    width: fit-content;
+    height: fit-content;
     margin-top: 1rem;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 0.8rem;
 }
 
-button .options {
-    height: 0.5rem;
-    width: 0.5rem;
+.options button {
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
     display: grid;
     place-items: center;
     border-radius: 0.2rem;
-    background-color: var(--color-white);
     outline: none;
-    color: var(--color-black);
 }
 
 .options select {
@@ -197,26 +202,73 @@ button .options {
     font-family: 'Raleway', sans-serif;
 }
 
-.input-wrapper{
+.input-wrapper {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-input[type="color"]{
+.fa-solid,
+.fas {
+    font-size: 1rem
+}
+
+input[type="color"] {
+    width: 1.5rem;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    width: 2.5rem;
-    height: 1.85rem;
     border: none;
     cursor: pointer;
 }
 
-input[type="color"]::-webkit-color-swatch{
+input[type="color"]::-webkit-color-swatch {
     border: none;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0 0.1rem var(--color-white), 0 0 0 0.2rem var(--color-light);
+    border-radius: 0.3rem;
 }
 
+#first-options-sec,
+#second-options-sec,
+#third-options-sec {
+    align-items: center;
+    width: fit-content;
+    gap: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+/* .font-options{
+    display: flex;
+    gap: 1rem;
+}
+ */
+
+#textFormat,
+#undoRedo,
+#alignment,
+#link,
+#list,
+#headings,
+#font {
+    align-items: flex-start;
+    width: auto;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: row;
+}
+
+#color {
+    gap: 3rem;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+.active{
+    transition: all .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #f5c8cf;
+}
