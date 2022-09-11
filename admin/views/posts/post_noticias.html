@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,52 +13,61 @@
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
 
+    <!-- FONT AWESOME CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../../admin/css/posts/post_noticias.css">
 </head>
+
 <body>
     <header>
         <h2>Criar uma notícia</h2>
 
         <div class="buttons">
-            <div class="save">  
+            <div class="save">
                 <button class="btn__save" type="submit">Salvar</button>
             </div>
-            
-            <div class="clear">   
+
+            <div class="clear">
                 <button class="btn__clear" type="reset">Limpar</button>
-                </div>
-    
-            <div class="cancel">   
+            </div>
+
+            <div class="cancel">
                 <button class="btn__cancel">Cancelar</button>
-            </div> 
+            </div>
         </div>
     </header>
 
     <main>
-        
         <section class="sec1">
             <div class="header">
                 <fieldset class="id">
-                    <legend><h4>ID</h4></legend>
+                    <legend>
+                        <h4>ID</h4>
+                    </legend>
                     <div class="content">
                         <i class="normal-i bigger-i uil uil-list-ol"></i>
                         <input disabled value="0" type="number">
                         <!-- o value vai ser o valor do PK no Banco  -->
                     </div>
                 </fieldset>
-    
+
                 <fieldset class="title">
-                    <legend><h4>Título</h4></legend>
+                    <legend>
+                        <h4>Título</h4>
+                    </legend>
                     <div class="content">
                         <i class="normal-i bigger-i uil uil-text-fields"></i>
                         <input placeholder="Insira o título da notícia" type="text">
                     </div>
                 </fieldset>
-    
+
                 <fieldset class="data">
-                    <legend><h4>Data</h4></legend>
+                    <legend>
+                        <h4>Data</h4>
+                    </legend>
                     <div class="content">
                         <i class="normal-i bigger-i uil uil-calendar-alt"></i>
                         <!-- Aqui o banco de dados vai informar a data atual -->
@@ -65,40 +75,148 @@
                     </div>
                 </fieldset>
             </div>
-
-            <fieldset>
-                <legend><h4>Subtítulo</h4></legend>
-                <div class="subtitle content"> 
+            <fieldset id="subtitle">
+                <legend>
+                    <h4>Subtítulo</h4>
+                </legend>
+                <div class="content">
                     <i class="normal-i bigger-i uil uil-comment-dots"></i>
-                    <textarea class="st-text" placeholder="Insira o subtítulo da notícia"></textarea>
+                    <textarea id="subtitle-textarea"  maxlength="350" placeholder="Insira o subtítulo da notícia"></textarea>
                 </div>
             </fieldset>
 
             <fieldset class="attach">
-                <legend><h4>Anexo: foto e/ou vídeo</h4></legend>
+                <legend>
+                    <h4>Anexo: foto e/ou vídeo</h4>
+                </legend>
                 <div class="attach__main">
                     <i class="normal-i bigger-i uil uil-file-search-alt"></i>
                     <!-- <input type="file" accept="image/*, video/*"> -->
-                    <input type="file" accept=".jpg, .jpeg, .png, .mp4, .avi" id="image[]" multiple onchange="addImagesToPreview(event)" />    
+                    <input type="file" accept=".jpg, .jpeg, .png, .mp4, .avi" id="image[]" multiple
+                        onchange="addImagesToPreview(event)" />
             </fieldset>
 
             <div class="attach__content">
                 <div id="imagesPreview"></div>
                 <script src="/js/components/ImagePreview.js"></script>
-            </div> 
+            </div>
         </section>
 
         <section class="sec2">
+            <div class="options">
+
+                <!-- Text format -->
+                <button id="bold" class="option-button format">
+                    <i class="fa-solid fa-bold"></i>
+                </button>
+                <button id="italic" class="option-button format">
+                    <i class="fa-solid fa-italic"></i>
+                </button>
+                <button id="underline" class="option-button format">
+                    <i class="fa-solid fa-underline"></i>
+                </button>
+                <button id="strikethrough" class="option-button format">
+                    <i class="fa-solid fa-strikethrough"></i>
+                </button>
+                <button id="superscript" class="option-button script">
+                    <i class="fa-solid fa-superscript"></i>
+                </button>
+                <button id="subscript" class="option-button script">
+                    <i class="fa-solid fa-subscript"></i>
+                </button>
+
+
+                <!-- List -->
+                <button id="insertOrderedList" class="option-button">
+                    <!-- pq div, e não <i>?? -->
+                    <div class="fa-solid fa-list-ol"></div>
+                </button>
+                <button id="insertUnorderedList" class="option-button">
+                    <!-- agora é <i>?? --><i class="fa-solid fa-list-ul"></i>
+                </button>
+
+
+                <!-- Undo/Redo -->
+                <button id="undo" class="option-button">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </button>
+                <button id="redo" class="option-button">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+
+
+                <!-- Link -->
+                <button id="createLink" class="adv-option-button">
+                    <i class="fa fa-link"></i>
+                </button>
+                <button id="unlink" class="option-button">
+                    <i class="fa fa-unlink"></i>
+                </button>
+
+
+                <!-- Alignment -->
+                <button id="justifyLeft" class="option-button align">
+                    <i class="fa-solid fa-align-left"></i>
+                </button>
+                <button id="justifyCenter" class="option-button align">
+                    <i class="fa-solid fa-align-center"></i>
+                </button>
+                <button id="justifyRight" class="option-button align">
+                    <i class="fa-solid fa-align-right"></i>
+                </button>
+                <button id="justifyFull" class="option-button align">
+                    <i class="fa-solid fa-align-justify"></i>
+                </button>
+                <button id="indent" class="option-button spacing">
+                    <i class="fa-solid fa-indent"></i>
+                </button>
+                <button id="outdent" class="option-button spacing">
+                    <i class="fa-solid fa-outdent"></i>
+                </button>
+
+
+                <!-- Headings -->
+                <select id="formatBlock" class="adv-option-button">
+                    <option value="H1">H1</option>
+                    <option value="H2">H2</option>
+                    <option value="H3">H3</option>
+                    <option value="H4">H4</option>
+                    <option value="H5">H5</option>
+                    <option value="H6">H6</option>
+                </select>
+
+
+                <!-- Font -->
+                <select id="fontName" class="adv-option-button"></select>
+                <select name="" id="fontSize" class="adv-option-button"></select>
+
+
+                <!-- Color -->
+                <div class="input-wrapper">
+                    <input type="color" id="foreColor" class="adv-option-button"/>
+                    <label for="foreColoro">Cor do texto</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="color" id="backColor" class="adv-option-button"/>
+                    <label for="backColor">Cor do destaque</label>
+                </div>                
+            </div>
+
+            
             <fieldset>
-                <legend><h4>Corpo</h4></legend>
+                <legend>
+                    <h4>Corpo</h4>
+                </legend>
                 <div class="content">
                     <i class="normal-i bigger-i uil uil-subject"></i>
-                    <textarea class="cp-text" placeholder="Insira o corpo da notícia" rows="4" cols="50" name="comment" form=""></textarea>
+                    <textarea id="newsbody-textarea" placeholder="Insira o corpo da notícia" rows="4" cols="50" name="comment"
+                        form=""></textarea>
                 </div>
             </fieldset>
-        </section>  
+        </section>
 
     </main>
 
 </body>
+
 </html>

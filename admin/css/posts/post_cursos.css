@@ -30,6 +30,17 @@ header {
     width: auto;
 }
 
+#sec3{
+    gap: 1rem;
+    display: flex;
+}
+
+.attach-content-column{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
 /* ID & NAME */
 .id {
     width: 4rem;
@@ -37,7 +48,7 @@ header {
 }
 
 .name {
-    width: 30%;
+    width: 40rem;
     height: 4rem;
 }
 
@@ -52,55 +63,27 @@ header {
 }
 
 /* COURSES BODY & DESCRIPTION*/
-.content {
-    display: flex;
-}
-
-.content-text {
-    resize: vertical;
-    font-size: 1.2rem;
-    background: none;
+#workload{
     width: 100%;
-    height: 100%;
 }
 
-.fieldset__1 {
-    width: auto;
-    height: 4rem;
-}
-
-.fieldset__2 {
+#vacancies{
     width: 100%;
-    height: 4rem;
 }
 
-.fieldset__3 {
-    width: auto;
-    height: 4rem;
+#shift{
+    width: 20rem;
 }
 
-.fieldset__4 {
-    width: 21%;
-    height: 4rem;
-}
-
-.fieldset__5 {
-    width: 20%;
-    height: 4rem;
-}
-
-.desc-text {
-    font-size: 1.2rem;
-    font-weight: 500;
-    width: 100%;
-    margin-bottom: 0.5rem;
+#desc-textarea{
     resize: none;
-    border: 0;
-    /* border-bottom: 2px solid var(--color-light); */
-    background: none;
-    height: 7.55rem;
 }
 
+#description{
+    display: flex;
+    align-items: flex-start;
+    height: 9rem;
+}
 
 /* NUMBER INPUT OF VACANCIES */
 .hour { 
@@ -113,11 +96,4 @@ header {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
-}
-
-input[type="button"] {
-    display: flex;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.2rem;
 }

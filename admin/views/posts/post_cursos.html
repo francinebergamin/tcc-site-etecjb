@@ -61,27 +61,19 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="fieldset__5">
-                    <legend>
-                        <h4>Carga Horária</h4>
-                    </legend>
-                    <div class="content">
-                        <i class="normal-i bigger-i uil uil-comment-dots"></i>
-
-                        <div class="hour">
-                        <input type="number" value="100" step="2" min="100" max="300" id="hour-input"></input>
-                        </div>
-                    </div>
-                </fieldset>
-
-                <fieldset class="fieldset__4">
+                <fieldset id="shift">
                     <legend>
                         <h4>Turno</h4>
-                        
+                        <select id="">
+                            <option value="Matutino">Matutino</option>
+                            <option value="Vespertino">Vespertino</option>
+                            <option value="Integral">Integral</option>
+                            <option value="Noturno">Noturno</option>
+                        </select>
                     </legend>
                 </fieldset>
 
-                <fieldset class="fieldset__3">
+                <fieldset id="vacancies">
                     <legend>
                         <h4>Nº Vagas</h4>
                     </legend>
@@ -92,32 +84,51 @@
                 </fieldset>
             </div>
 
-            <fieldset>
+            <fieldset id="description">
                 <legend>
                     <h4>Descrição</h4>
                 </legend>
                 <div class="content">
                     <i class="normal-i bigger-i uil uil-comment-dots"></i>
-                    <textarea maxlength="400" class="desc-text" placeholder="Insira a descrição do curso"></textarea>
+                    <textarea id="desc-textarea" maxlength="400" placeholder="Insira o subtítulo da notícia"></textarea>
                 </div>
             </fieldset>
 
-            <fieldset class="attach">
-                <legend>
-                    <h4>Anexo: foto de capa do curso</h4>
-                </legend>
-                <div class="attach__main">
-                    <i class="normal-i bigger-i uil uil-file-search-alt"></i>
-                    <!-- <input type="file" accept="image/*, video/*"> -->
-                    <input type="file" accept=".jpg, .jpeg, .png" id="image[]" multiple
-                        onchange="addImagesToPreview(event)" />
-            </fieldset>
+            <section id="sec3">
+                <fieldset id="workload">
+                    <legend>
+                        <h4>Carga Horária</h4>
+                    </legend>
+                    <div class="content">
+                        <i class="normal-i bigger-i uil uil-clock"></i>
+    
+                        <div class="hour">
+                        <input type="number" value="100" step="2" min="100" max="300" id="hour-input"></input>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <div class="attach-content-column">
+                    <fieldset class="attach">
+                        <legend>
+                            <h4>Anexo: foto de capa do curso</h4>
+                        </legend>
+                        <div class="attach__main">
+                            <i class="normal-i bigger-i uil uil-file-search-alt"></i>
+                            <!-- <input type="file" accept="image/*, video/*"> -->
+                            <input type="file" accept=".jpg, .jpeg, .png" id="image[]" multiple
+                                onchange="addImagesToPreview(event)" />
+                    </fieldset>
+        
+                    <div class="attach__content">
+                        <div id="imagesPreview"></div>
+                        <script src="/js/components/ImagePreview.js"></script>
+                    </div>
+                </div>
+            </section>
+            </section>
 
-            <div class="attach__content">
-                <div id="imagesPreview"></div>
-                <script src="/js/components/ImagePreview.js"></script>
-            </div>
-        </section>
+            
 
         <section class="sec2">
             <fieldset class="fieldset__1">
@@ -126,7 +137,7 @@
                 </legend>
                 <div class="content">
                     <i class="normal-i bigger-i uil uil-comment-dots"></i>
-                    <input  maxlength="100" class="content-text" placeholder="Insira o nome do coordenador"></input>
+                    <input maxlength="100" class="content-text" placeholder="Insira o nome do coordenador"></input>
                 </div>
             </fieldset>
 

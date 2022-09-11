@@ -37,10 +37,6 @@ header {
 
 
 /* AVALIATIONS BODY */
-.content {
-    display: flex;
-}
-
 .fr-text {
     width: 100%;
     font-size: 1.2rem;

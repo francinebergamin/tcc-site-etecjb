@@ -45,36 +45,6 @@ header {
 
 
 /* NEWS BODY & SUBTITLE*/
-.content {
-    display: flex;
-}
-
-.st-text {
-    height: 0.7rem;
-}
-
-.subtitle {
-    height: 4rem;
-}
-
-.st-text,
-.cp-text {
-    font-size: medium;
-    font-weight: 500;
-    width: 100%;
-    height: 100%;
-    padding: 0rem 4rem 0.5rem 0rem;
-    margin-bottom: 0.5rem;
-    resize: vertical;
-    border: 0;
-    /* border-bottom: 2px solid var(--color-light); */
-    background: none;
-}
-
-.cp-text {
-    height: 27rem;
-}
-
 .id {
     width: 4rem;
     height: 4rem;
@@ -82,10 +52,22 @@ header {
 
 .title {
     width: 32rem;
-    height: 4rem;
 }
 
 .data {
     width: 0rem;
-    height: 4rem;
+}
+
+#subtitle{
+    display: flex;
+    align-items: flex-start;
+    height: 9rem;
+}
+
+#subtitle-textarea{
+    resize: none;
+}
+
+#newsbody-textarea{
+    resize: vertical;
 }

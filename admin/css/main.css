@@ -110,19 +110,22 @@ body {
 
 /* FIELDSET CONFIGS */
 fieldset {
+    height: 4rem;
     border-radius: 0.25rem;
     /* width: 25rem; */
-    padding: 0.7rem;
+    padding: 0.5rem;
     margin: 0rem 0 1rem 0;
     border: 1px solid var(--color-black);
 }
 
+textarea,
 fieldset input {
     height: 100%;
     width: 100%;
 
+    padding: 0 0.25rem 0 0.2rem;
     background: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -130,8 +133,16 @@ legend {
     padding: 0.5rem;
 }
 
-textarea{
-    background:none;
+textarea {
+    height: 6rem;
+    background: none;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    font-size: medium;
+    background: none;
 }
 
 
@@ -155,3 +166,57 @@ textarea{
     justify-content: center;
     align-items: flex-start;
 }
+
+.options {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+button .options {
+    height: 0.5rem;
+    width: 0.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.2rem;
+    background-color: var(--color-white);
+    outline: none;
+    color: var(--color-black);
+}
+
+.options select {
+    padding: 0.2rem;
+    border: 0.1rem solid var(--color-black);
+    border-radius: 0.2rem;
+}
+
+.options label,
+.options select {
+    font-family: 'Raleway', sans-serif;
+}
+
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+input[type="color"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 2.5rem;
+    height: 1.85rem;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch{
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 0.1rem var(--color-white), 0 0 0 0.2rem var(--color-light);
+}
+
