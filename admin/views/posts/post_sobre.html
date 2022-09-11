@@ -38,8 +38,7 @@
         </div>
     </header>
 
-    <main>
-        <section class="sec__left">
+        <section class="sec">
             <div class="pic">
                 <fieldset class="attach">
                     <legend>
@@ -56,23 +55,24 @@
 
                 </fieldset>
 
+                <div id="video__display">
+                    <video controls height="" width="" id="video-tag">
+                        <source id="video-source" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 
-                <hr>
-                <video controls height="320" width="640" id="video-tag">
-                    <source id="video-source" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
 
             </div>
         </section>
-    </main>
+
     <script>
         /* video teste */
         const videoSrc = document.querySelector("#video-source");
         const videoTag = document.querySelector("#video-tag");
         const inputTag = document.querySelector("#input-tag");
 
-        inputTag.addEventListener('change',  readVideo);
+        inputTag.addEventListener('change', readVideo);
 
         function readVideo(event) {
             console.log(event.target.files)

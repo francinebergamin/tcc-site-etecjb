@@ -1,6 +1,23 @@
 /* ATTACH SIZE */
-.attach{
+.attach {
   margin-top: 2rem;
-  width: fit-content;
   height: fit-content;
+}
+
+video {
+  display: flex;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 40rem;
+  max-height: 30rem;
+}
+
+.pic {
+  width: fit-content;
+}
+
+.sec,
+.header {
+  width: fit-content;
 }
