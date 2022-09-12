@@ -6,7 +6,7 @@ main {
 
     margin-top: 2rem;
     gap: 2rem;
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 0fr 1fr;
     justify-content: space-between;
     justify-items: stretch;
@@ -23,6 +23,11 @@ header {
 
 
 /* SECTIONS */
+.section-grid{
+  display: flex;
+  gap: 2rem;
+}
+
 .sec1 {
     width: 45rem;
     display: flex;
@@ -30,6 +35,11 @@ header {
     align-content: space-around;
     align-items: stretch;
     justify-content: flex-start;
+}
+
+.attach-content-column{
+  width: 100%;
+
 }
 
 /* ID, TITLE AND DATE */
@@ -58,19 +68,25 @@ header {
     width: 0rem;
 }
 
+#newsbody{
+  max-width: 100%;
+  width: fit-content;
+}
+
 #newsbody,
 #subtitle{
     display: flex;
     align-items: flex-start;
     height: auto;
+    width: auto;
 }
 
 #subtitle-textarea{
     resize: none;
 }
 
-#newsbody-textarea{
+.newsbody-textarea{
     padding: 0rem 1rem 0rem 1rem;
-    height: 70rem;
-    resize: vertical;
+    height: 50rem;
+    width: 100%;
 }
